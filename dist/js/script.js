@@ -36,3 +36,18 @@ jQuery(function ($) {
   });
 
 });
+
+$(function() {
+
+  // Swiper
+  const swiper = new Swiper('.p-mv__swiper', {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    effect: 'fade',
+    speed: 1000,
+  });
+
+});

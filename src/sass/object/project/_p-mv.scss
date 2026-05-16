@@ -1,0 +1,71 @@
+@use "global" as *;
+
+.p-mv {
+  position: relative;
+  height: 100vh;
+  height: 100svh;
+}
+
+.p-mv__swiper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.p-mv__catch {
+  z-index: 1;
+  position: absolute;
+  top: calc(219 / 375 * 100vw);
+  left: 50%;
+  transform: translateX(-50%);
+  color: $white;
+  width: 100%;
+  padding-left: calc(63 / 375 * 100vw);
+  padding-right: calc(55 / 375 * 100vw);
+  text-align: center;
+  white-space: nowrap;
+
+  @include mq(md) {
+    top: calc(340 / 800 * 100vh);
+    padding-left: calc(63 / 1080 * 100vw);
+    padding-right: calc(55 / 1080 * 100vw);
+  }
+}
+
+.p-mv__phrase {
+  font-size: calc(30 / 375 * 100vw);
+  line-height: 2;
+  font-weight: 600;
+  text-shadow: 5px 5px 5px $black;
+  letter-spacing: calc(9 / 375 * 100vw);
+  white-space: nowrap;
+
+  @include mq(md) {
+    font-size: calc(40 / 1080 * 100vw);
+    line-height: 1.75;
+    letter-spacing: calc(12 / 1080 * 100vw);
+    margin-left: calc(6 / 1080 * 100vw);
+  }
+}
+
+.p-mv__phrase:last-child {
+  margin-left: calc(-6 / 375 * 100vw);
+
+  @include mq(md) {
+    margin-left: calc(6 / 1080 * 100vw);
+  }
+}

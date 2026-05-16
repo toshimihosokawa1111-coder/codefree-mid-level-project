@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.c-hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: myrem(8);
+  width: myrem(72);
+  height: myrem(50);
+  background: $white;
+  padding-bottom: 4px;
+  cursor: pointer;
+  flex-shrink: 0;
+
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.c-hamburger__line {
+  display: block;
+  width: myrem(32);
+  height: 4px;
+  background: $green;
+  border-radius: 50px;
+}

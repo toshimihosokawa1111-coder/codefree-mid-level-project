@@ -1,31 +1,141 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <meta name="format-detection" content="telephone=no" />
-  <!-- meta情報 -->
-  <title>タイトル</title>
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
-  <!-- ogp -->
-  <meta property="og:title" content="" />
-  <meta property="og:type" content="" />
-  <meta property="og:url" content="" />
-  <meta property="og:image" content="" />
-  <meta property="og:site_name" content="" />
-  <meta property="og:description" content="" />
-  <!-- ファビコン -->
-  <link rel="icon" href="" />
-  <!-- css -->
-  <link rel="stylesheet" href="./css/styles.css">
-  <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script defer src="./js/script.js"></script>
-</head>
-<body>
-  <div class="l-inner">
-    <p class="p-test">test</p>
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>タイトル</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <link rel="icon" href="" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <!-- JavaScript -->
+    <script defer src="./js/script.js"></script>
+  </head>
+  <body>
+    <div class="p-mv">
+      <header class="p-header l-header">
+        <div class="p-header__inner l-inner">
+          <h1 class="p-header__logo">株式会社北村建設興業</h1>
+          <div class="p-header__hamburger">
+            <button
+              type="button"
+              class="c-hamburger js-hamburger"
+              aria-label="メニューを開く"
+            >
+              <span class="c-hamburger__line"></span>
+              <span class="c-hamburger__line"></span>
+              <span class="c-hamburger__line"></span>
+            </button>
+          </div>
+          <nav class="p-header__nav">
+            <ul class="p-header__items">
+              <li class="p-header__item"><a href="#about">about</a></li>
+              <li class="p-header__item"><a href="#service">service</a></li>
+              <li class="p-header__item"><a href="#works">works</a></li>
+              <li class="p-header__item"><a href="#news">news</a></li>
+              <li class="p-header__item"><a href="#company">company</a></li>
+              <li class="p-header__item"><a href="#contact">contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <div class="p-mv__swiper swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcset="./images/FirstView_01.jpg"
+              />
+              <img src="./images/SP_FirstView-01.jpg" alt="" />
+            </picture>
+          </div>
+          <div class="swiper-slide">
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcset="./images/FirstView02.jpg"
+              />
+              <img src="./images/SP_FirstView-02.jpg" alt="" />
+            </picture>
+          </div>
+          <div class="swiper-slide">
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcset="./images/FirstView03.jpg"
+              />
+              <img src="./images/SP_FirstView-03.jpg" alt="" />
+            </picture>
+          </div>
+        </div>
+      </div>
+      <div class="p-mv__catch">
+        <p class="p-mv__phrase">永遠も。<br class="u-mobile" />瞬間も。</p>
+        <p class="p-mv__phrase">あなたと共に。</p>
+      </div>
+    </div>
+
+    <!-- about -->
+
+    <section class="p-about" id="about">
+      <div class="p-about__inner">
+        <div class="p-about__image">
+          <picture>
+            <source media="(min-width: 768px)" srcset="./images/PC_About.jpg" />
+            <img src="./images/SP_About.jpg" alt="伝統とイマを繋ぐ" />
+          </picture>
+        </div>
+        <div class="p-about__contents">
+          <h2 class="p-about__title">伝統とイマを繋ぐ</h2>
+          <div class="p-about__text">
+            <div class="p-about__text-item">
+              <p>古来から伝わる伝統文化</p>
+            </div>
+            <div class="p-about__text-item">
+              <p>昔からそこにある材料</p>
+            </div>
+            <div class="p-about__text-item">
+              <p>その土地に長い間かけて</p>
+            </div>
+            <div class="p-about__text-item">
+              <p>最適化してきた</p>
+            </div>
+            <div class="p-about__text-item">
+              <p>たくさんのヒントを</p>
+            </div>
+            <div class="p-about__text-item">
+              <p>イマを生きる私たちの</p>
+            </div>
+            <div class="p-about__text-item">
+              <p>心地よさに取り入れ</p>
+            </div>
+            <div class="p-about__text-item">
+              <p>新たな技術革新を</p>
+            </div>
+            <div class="p-about__text-item">
+              <p>起こし続ける会社です</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
