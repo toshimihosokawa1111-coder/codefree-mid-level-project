@@ -51,3 +51,19 @@ $(function() {
   });
 
 });
+
+// Works Modal
+$('.js-works-item').on('click', function() {
+  const modalSrc = $(this).data('modal-src');
+  const modalCaption = $(this).data('modal-caption');
+
+  $('.js-works-modal-img').attr('src', modalSrc);
+  $('.js-works-modal-caption').text(modalCaption);
+  $('.js-works-modal').addClass('is-open');
+  $('body').css('overflow', 'hidden');
+});
+
+$('.js-works-modal-overlay, .js-works-modal-close').on('click', function() {
+  $('.js-works-modal').removeClass('is-open');
+  $('body').css('overflow', '');
+});

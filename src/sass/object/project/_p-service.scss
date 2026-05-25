@@ -1,12 +1,13 @@
 @use "global" as *;
 
 .p-service {
+  background: $bg-light-green;
   padding-top: myrem(51);
   padding-bottom: myrem(60);
 
   @include mq(md) {
     padding-top: myrem(82);
-    padding-bottom: myrem(80);
+    padding-bottom: myrem(131);
   }
 }
 
