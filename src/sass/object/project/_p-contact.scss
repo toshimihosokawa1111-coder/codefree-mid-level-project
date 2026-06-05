@@ -1,0 +1,42 @@
+@use "global" as *;
+
+.p-contact {
+  background: $bg-light-green;
+  padding-top: myrem(50);
+  padding-bottom: myrem(50);
+   @include mq(md) {
+     padding-top: myrem(80);
+     padding-bottom: myrem(80);
+   }
+}
+
+.p-contact__inner {
+  padding-left: myrem(30);
+  padding-right: myrem(30);
+
+  @include mq(md) {
+    padding-left: myrem(140);
+    padding-right: myrem(140);
+  }
+}
+
+.p-contact__title {
+  margin-left: myrem(9);
+
+}
+
+.p-contact__lead {
+  margin-top: myrem(35);
+  font-size: myrem(20);
+  font-weight: 500;
+  line-height: 1.65;
+}
+
+.p-contact__form {
+  margin-top: myrem(40);
+
+}
+
+.p-contact__item {
+  margin-top: myrem(30);
+}
