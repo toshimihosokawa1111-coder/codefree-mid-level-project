@@ -29,6 +29,7 @@
     <script defer src="./js/script.js"></script>
   </head>
   <body>
+
     <!-- mv header -->
 
     <div class="p-mv">
@@ -40,6 +41,8 @@
               type="button"
               class="c-hamburger js-hamburger"
               aria-label="メニューを開く"
+              aria-expanded="false"
+              aria-controls="drawer"
             >
               <span class="c-hamburger__line"></span>
               <span class="c-hamburger__line"></span>
@@ -58,6 +61,39 @@
           </nav>
         </div>
       </header>
+
+      <!-- drawer -->
+      <div class="c-drawer js-drawer" id="drawer" aria-hidden="true">
+        <nav class="c-drawer__nav" aria-label="メインメニュー">
+          <ul class="c-drawer__items">
+            <li class="c-drawer__item">
+              <a href="#about" class="c-drawer__link js-drawer-link">about</a>
+            </li>
+            <li class="c-drawer__item">
+              <a href="#service" class="c-drawer__link js-drawer-link"
+                >SERVICE</a
+              >
+            </li>
+            <li class="c-drawer__item">
+              <a href="#works" class="c-drawer__link js-drawer-link">works</a>
+            </li>
+            <li class="c-drawer__item">
+              <a href="#news" class="c-drawer__link js-drawer-link">news</a>
+            </li>
+            <li class="c-drawer__item">
+              <a href="#company" class="c-drawer__link js-drawer-link"
+                >company</a
+              >
+            </li>
+            <li class="c-drawer__item">
+              <a href="#contact" class="c-drawer__link js-drawer-link"
+                >contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+
       <div class="p-mv__swiper swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -513,7 +549,7 @@
           ３営業日以内にメールにてご連絡いたします。*は入力必須項目となります。
         </div>
         <form class="p-contact__form" action="#" method="post">
-          <div class="p-contact__item p-contact-item">
+          <div class="p-contact__item p-contact-item p-contact-item--name">
             <label class="p-contact-item__label" for="name">
               お名前<span class="p-contact-item__required">*</span></label
             >
@@ -538,7 +574,7 @@
               </label>
             </div>
           </div>
-          <div class="p-contact__item p-contact-item">
+          <div class="p-contact__item p-contact-item p-contact-item--email">
             <label class="p-contact-item__label" for="email">
               メールアドレス<span class="p-contact-item__required">*</span>
             </label>
@@ -550,23 +586,24 @@
               placeholder="例：aaaaaaaa@gmail.com"
             />
           </div>
-          <div class="p-contact__item p-contact-item">
-              <label class="p-contact-item__label" for="category">
-                問い合わせ種別
-              </label>
-              <div class="p-contact-item__select-wrap">
-                <select
-                  class="p-contact-item__select"
-                  name="category"
-                  id="category"
-                >
-                  <option value="house">家づくりについて</option>
-                  <option value="reform">リフォームについて</option>
-                  <option value="other">その他</option>
-                </select>
-              </div>
+          <div class="p-contact__item p-contact-item--category">
+            <label class="p-contact-item__label" for="category">
+              問い合わせ種別
+            </label>
+            <div class="p-contact-item__select-wrap">
+              <select
+                class="p-contact-item__select"
+                name="category"
+                id="category"
+              >
+                <option value="">選択してください</option>
+                <option value="house">家づくりについて</option>
+                <option value="reform">リフォームについて</option>
+                <option value="other">その他</option>
+              </select>
+            </div>
           </div>
-          <div class="p-contact__item p-contact-item">
+          <div class="p-contact__item p-contact-item p-contact-item--message">
             <label class="p-contact-item__label" for="message">
               内容<span class="p-contact-item__required">*</span>
             </label>
@@ -579,7 +616,11 @@
           <div class="p-contact__item p-contact-item p-contact-item--check">
             <label class="p-contact-item__label p-contact-item__label--check">
               何を見て当社HPを知りましたか？
-              <span class="p-contact-item__sub">(複数回答可)<span class="p-contact-item__required">*</span></span>
+              <span class="p-contact-item__sub"
+                >(複数回答可)<span class="p-contact-item__required"
+                  >*</span
+                ></span
+              >
             </label>
             <div class="p-contact-item__checkboxes">
               <label class="p-contact-item__checkbox">
@@ -616,7 +657,7 @@
               </label>
             </div>
           </div>
-          <div class="p-contact__item p-contact-item">
+          <div class="p-contact__item p-contact-item p-contact-item--privacy">
             <label class="p-contact-item__label">個人情報保護方針</label>
             <div class="p-contact-item__policy">
               <p>
@@ -671,5 +712,51 @@
         </form>
       </div>
     </section>
+
+    <!-- footer -->
+
+    <footer class="p-footer">
+      <div class="p-footer__inner l-inner">
+        <p class="p-footer__logo">株式会社 北村建設興業</p>
+        <nav class="p-footer__nav">
+          <ul class="p-footer__items">
+            <li class="p-footer__item"><a href="#about">about</a></li>
+            <li class="p-footer__item"><a href="#service">service</a></li>
+            <li class="p-footer__item"><a href="#works">works</a></li>
+            <li class="p-footer__item"><a href="#news">news</a></li>
+            <li class="p-footer__item"><a href="#company">company</a></li>
+            <li class="p-footer__item"><a href="#contact">contact</a></li>
+          </ul>
+        </nav>
+        <ul class="p-footer__sns">
+          <li class="p-footer__sns-item">
+            <a href="#" aria-label="Twitter">
+              <img src="./images/icon-twitter.svg" alt="Twitter" />
+            </a>
+          </li>
+          <li class="p-footer__sns-item">
+            <a href="#" aria-label="Facebook">
+              <img src="./images/icon-facebook.svg" alt="Facebook" />
+            </a>
+          </li>
+          <li class="p-footer__sns-item">
+            <a href="#" aria-label="Youtube">
+              <img src="./images/icon-youtube.svg" alt="Youtube" />
+            </a>
+          </li>
+          <li class="p-footer__sns-item">
+            <a href="#" aria-label="Instagram">
+              <img src="./images/icon-instagram.svg" alt="Instagram" />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="p-footer__copyright">
+        <p class="p-footer__copyright-text">
+          &copy;copyright0000　<br class="u-mobile" />
+          kitamurakensetukogyo
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

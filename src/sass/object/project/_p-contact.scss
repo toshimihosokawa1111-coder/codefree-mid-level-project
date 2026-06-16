@@ -5,7 +5,7 @@
   padding-top: myrem(50);
   padding-bottom: myrem(50);
    @include mq(md) {
-     padding-top: myrem(80);
+     padding-top: myrem(82);
      padding-bottom: myrem(80);
    }
 }
@@ -35,8 +35,41 @@
 .p-contact__form {
   margin-top: myrem(40);
 
+  @include mq(md) {
+    margin-top: myrem(69);
+  }
 }
 
 .p-contact__item {
   margin-top: myrem(30);
+  @include mq(md) {
+    margin-top: myrem(50);
+  }
+}
+
+.p-contact__item:first-child {
+  margin-top: 0;
+}
+
+.p-contact__submit {
+  margin-top: myrem(50);
+  text-align: center;
+
+  @include mq(md) {
+    margin-top: myrem(80);
+
+  }
+}
+
+.p-contact__btn {
+  padding: myrem(8) myrem(67) myrem(9) myrem(68);
+  background: $green;
+  color: $white;
+  font-size: myrem(20);
+  font-weight: 600;
+  line-height: 1.65;
+
+  @include mq(md) {
+    padding: myrem(8) myrem(60) myrem(9) myrem(60);
+  }
 }

@@ -1,51 +1,163 @@
 @use "global" as *;
 
+// ブロック
+
 .p-contact-item {
   display: flex;
   flex-direction: column;
+
   @include mq(md) {
     flex-direction: initial;
     align-items: center;
+    column-gap: myrem(10);
+    justify-content: space-between;
   }
 }
 
+// モディファイア
+
+.p-contact-item--name {
+  @include mq(md) {
+    column-gap: myrem(95);
+  }
+}
+
+.p-contact-item--email {
+  @include mq(md) {
+
+  }
+}
+
+.p-contact-item.p-contact-item--gender {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: myrem(45);
+
+  @include mq(md) {
+    margin-top: myrem(50);
+    column-gap: myrem(129);
+    justify-content: initial;
+  }
+}
+
+.p-contact-item--category {
+  @include mq(md) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: myrem(30);
+  }
+}
+
+.p-contact-item.p-contact-item--message {
+  @include mq(md) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: myrem(50);
+  }
+}
+
+.p-contact-item.p-contact-item--check {
+  margin-top: myrem(29);
+  align-items: flex-start;
+
+  @include mq(md) {
+    flex-direction: column;
+    margin-top: myrem(53);
+  }
+}
+
+.p-contact-item.p-contact-item--privacy {
+  @include mq(md) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: myrem(48);
+  }
+}
+
+// 子要素
 .p-contact-item__label {
   font-size: myrem(20);
   font-weight: 500;
   line-height: 1.65;
+  white-space: nowrap;
+}
+
+.p-contact-item--email .p-contact-item__label {
+  @include mq(md) {
+    letter-spacing: -1px;
+    margin-top: 2px;
+  }
+}
+
+.p-contact-item--email .p-contact-item__required {
+  @include mq(md) {
+    margin-left: myrem(10);
+  }
+}
+
+.p-contact-item__label--check {
+  line-height: 1.35;
 }
 
 .p-contact-item__required {
   margin-left: myrem(7);
 }
 
-.p-contact-item__input, .p-contact-item__select {
-  width: 100%;
-  min-height: myrem(50);
+.p-contact-item__sub {
+  display: block;
+
   @include mq(md) {
-    max-width: myrem(630);
+    display: inline;
   }
 }
 
-.p-contact-item__input::placeholder, .p-contact-item__select {
+.p-contact-item__sub .p-contact-item__required {
+  margin-left: myrem(20);
+}
+
+.p-contact-item__input,
+.p-contact-item__select {
+  width: 100%;
+  max-height: myrem(50);
   font-size: myrem(16);
   font-weight: 500;
   line-height: 1.5625;
   padding: myrem(13) myrem(17) myrem(12);
 
+  @include mq(md) {
+    width: calc(630 / 800 * 100%);
+    font-size: myrem(18);
+  }
 }
 
-.p-contact-item--gender {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  column-gap: myrem(45);
+.p-contact-item__input,
+.p-contact-item__select {
+
+  @include mq(md) {
+  }
 }
 
 .p-contact-item__radios {
   display: flex;
   align-items: center;
   column-gap: myrem(33);
+
+  @include mq(md) {
+    column-gap: myrem(70);
+  }
+}
+
+.p-contact-item__radio {
+  display: flex;
+  align-items: center;
+  column-gap: myrem(8);
+  cursor: pointer;
+
+  @include mq(md) {
+    column-gap: myrem(15);
+  }
 }
 
 .p-contact-item__radio input {
@@ -68,13 +180,10 @@
     background: $black;
     border-radius: 50%;
   }
-}
 
-.p-contact-item__radio {
-  display: flex;
-  align-items: center;
-  column-gap: myrem(8);
-  cursor: pointer;
+  @include mq(md) {
+    margin-top: 0px;
+  }
 }
 
 .p-contact-item__radio span {
@@ -85,6 +194,10 @@
 
 .p-contact-item__select-wrap {
   position: relative;
+
+  @include mq(md) {
+    width: calc(630 / 800 * 100%);
+  }
 }
 
 .p-contact-item__select-wrap::after {
@@ -105,33 +218,21 @@
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+
+  @include mq(md) {
+    width: 100%;
+    padding: myrem(10) myrem(17) myrem(12) myrem(19);
+  }
 }
 
 .p-contact-item__textarea {
   width: 100%;
   padding: myrem(13) myrem(17) myrem(12);
   min-height: myrem(200);
-}
-
-.p-contact-item.p-contact-item--check {
-  margin-top: myrem(29);
-  align-items: flex-start;
-}
-
-.p-contact-item__label--check {
-  line-height: 1.35;
-}
-
-.p-contact-item__sub {
-  display: block;
 
   @include mq(md) {
-    display: inline;
+    margin-top: myrem(10);
   }
-}
-
-.p-contact-item__sub .p-contact-item__required {
- margin-left: myrem(20);
 }
 
 .p-contact-item__checkboxes {
@@ -143,6 +244,9 @@
 
   @include mq(md) {
     grid-template-columns: repeat(4, 1fr);
+    column-gap: myrem(34);
+    row-gap: myrem(15);
+    margin-top: myrem(15);
   }
 }
 
@@ -150,8 +254,11 @@
   display: flex;
   align-items: center;
   column-gap: myrem(10);
-  font-size: myrem(14);
   cursor: pointer;
+
+  @include mq(md) {
+    column-gap: myrem(20);
+  }
 }
 
 .p-contact-item__checkbox input {
@@ -167,23 +274,28 @@
 }
 
 .p-contact-item__checkbox input:checked::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-    width: myrem(6);
-    height: myrem(11);
-    border-right: 2px solid $green;
-    border-bottom: 2px solid $green;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: myrem(6);
+  height: myrem(11);
+  border-right: 2px solid $green;
+  border-bottom: 2px solid $green;
 }
 
 .p-contact-item__checkbox span {
-   font-size: myrem(16);
-   font-weight: 500;
-   line-height: 1.5625;
+  font-size: myrem(16);
+  font-weight: 500;
+  line-height: 1.5625;
 
+  @include mq(md) {
+    font-size: myrem(18);
+    line-height: 1.38889;
+    font-weight: 500;
   }
+}
 
 .p-contact-item__policy {
   padding: myrem(30) myrem(30) myrem(30) myrem(30);
@@ -192,24 +304,11 @@
   background: $white;
   position: relative;
 
-   &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: myrem(30);
-    background: $white;
-    pointer-events: none;
-    z-index: 2;
-
   @include mq(md) {
-    height: myrem(200);
-    margin-top: 0;
-    flex: 1;
+    height: myrem(300);
+    margin-top: myrem(10);
     padding: myrem(40);
   }
-}
 }
 
 .p-contact-item__policy::-webkit-scrollbar {
@@ -234,7 +333,6 @@
   background-clip: padding-box;
 }
 
-
 .p-contact-item__policy p {
   margin-top: myrem(33);
   font-size: myrem(16);
@@ -248,27 +346,17 @@
 }
 
 .p-contact-item__policy p:first-child {
-    margin-top: 0;
-  }
+  margin-top: 0;
+}
 
 .p-contact-item__policy p:last-child {
   display: block;
   overflow: visible;
 }
 
-.p-contact__submit {
-
+.p-contact-item__input,
+.p-contact-item__textarea,
+.p-contact-item__select {
+  outline: none;
+  border: none;
 }
-
-.p-contact__btn {
-
-}
-
-.p-contact__btn {
-
-}
-
-.p-contact__btn button {
-
-}
-

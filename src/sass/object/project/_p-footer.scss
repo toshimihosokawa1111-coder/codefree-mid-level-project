@@ -1,0 +1,100 @@
+@use "global" as *;
+
+.p-footer {
+ padding-top: myrem(50);
+
+ @include mq(md) {
+   padding-top: myrem(80);
+ }
+}
+
+.p-footer__inner {
+  padding-left: myrem(30);
+  padding-right: myrem(30);
+  text-align: center;
+
+  @include mq(md) {
+    padding-left: myrem(179);
+    padding-right: myrem(179);
+  }
+}
+
+.p-footer__logo {
+  font-size: myrem(20);
+  font-weight: 500;
+  line-height: 1.65;
+}
+
+.p-footer__nav {
+  margin-top: myrem(20);
+  padding-top: myrem(20);
+  border-top: 1px solid $black;
+  @include mq(md) {
+    margin-top: myrem(28);
+    padding-top: myrem(28);
+  }
+}
+
+.p-footer__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: myrem(30);
+  row-gap: myrem(5);
+
+  @include mq(md) {
+    gap: myrem(50)
+  }
+}
+
+.p-footer__item {
+}
+
+.p-footer__item a {
+  font-size: myrem(18);
+  font-weight: 500;
+  line-height: 1.83333;
+  text-transform: uppercase;
+}
+
+.p-footer__sns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: myrem(30);
+  margin-top: myrem(28);
+}
+
+.p-footer__sns-item {
+
+}
+
+.p-footer__sns-item a {
+
+}
+
+.p-footer__copyright {
+  margin-top: myrem(50);
+  padding-top: myrem(21);
+  padding-bottom: myrem(21);
+  background: $green;
+  color: $white;
+
+  @include mq(md) {
+    margin-top: myrem(79);
+    padding-top: myrem(34);
+    padding-bottom: myrem(34);
+  }
+}
+
+.p-footer__copyright-text {
+  text-transform: capitalize;
+  text-align: center;
+  font-size: myrem(20);
+  font-weight: 500;
+  line-height: 1.25;
+
+  @include mq(md) {
+    
+  }
+}

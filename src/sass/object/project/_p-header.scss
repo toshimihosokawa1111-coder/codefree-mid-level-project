@@ -1,13 +1,13 @@
 @use "global" as *;
 
 .p-header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
   width: 100%;
-  //padding-top: myrem(15);
-  //padding-bottom: myrem(15);
+  height: myrem(50);
+  transition: background 0.3s ease;
 
   @include mq(md) {
     padding-top: myrem(25);
@@ -16,6 +16,7 @@
 }
 
 .p-header__inner {
+  height: myrem(50);
   padding-left: myrem(20);
   padding-right: myrem(20);
   display: flex;
@@ -79,4 +80,8 @@
       width: 100%;
     }
   }
+}
+
+.p-header.is-scrolled {
+  background: $green;
 }

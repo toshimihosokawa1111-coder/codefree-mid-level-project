@@ -7,11 +7,14 @@
   align-items: center;
   row-gap: myrem(8);
   width: myrem(72);
-  height: myrem(50);
+  height: myrem(51);
   background: $white;
-  padding-bottom: 4px;
+  padding-top: 3px;
+  padding-bottom: myrem(6);
   cursor: pointer;
   flex-shrink: 0;
+  position: relative;
+  z-index: 1000;
 
   @include mq(md) {
     display: none;
@@ -24,4 +27,17 @@
   height: 4px;
   background: $green;
   border-radius: 50px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.c-hamburger.is-open .c-hamburger__line:nth-child(1) {
+  transform: translateY(myrem(12)) rotate(45deg);
+}
+
+.c-hamburger.is-open .c-hamburger__line:nth-child(2) {
+  opacity: 0;
+}
+
+.c-hamburger.is-open .c-hamburger__line:nth-child(3) {
+  transform: translateY(myrem(-12)) rotate(-45deg);
 }
