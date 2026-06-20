@@ -3,7 +3,7 @@
 .p-service {
   background: $bg-light-green;
   padding-top: myrem(51);
-  padding-bottom: myrem(60);
+  padding-bottom: myrem(50);
 
   @include mq(md) {
     padding-top: myrem(82);

@@ -95,6 +95,10 @@
   line-height: 1.25;
 
   @include mq(md) {
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //line-height: 1.65;
+    letter-spacing: -0.02em;
   }
 }

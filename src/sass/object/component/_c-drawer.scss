@@ -2,7 +2,7 @@
 
 .c-drawer {
   position: fixed;
-  top: myrem(49);
+  top: myrem(50);
   right: 0;
   width: calc(300 / 375 * 100%);
   background: $green;
@@ -16,7 +16,8 @@
   }
 
 .c-drawer__nav {
-  padding-top: myrem(12);
+  padding-top: myrem(14);
+  padding-bottom: myrem(12);
   padding-left: myrem(20);
 }
 
@@ -27,7 +28,7 @@
 }
 
 .c-drawer__item {
-  
+
 }
 
 .c-drawer__link {

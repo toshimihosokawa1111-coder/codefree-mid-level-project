@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .p-contact {
-  background: $bg-light-green;
+  background: $bg-light-green2;
   padding-top: myrem(50);
   padding-bottom: myrem(50);
    @include mq(md) {
@@ -52,7 +52,7 @@
 }
 
 .p-contact__submit {
-  margin-top: myrem(50);
+  margin-top: myrem(51);
   text-align: center;
 
   @include mq(md) {
@@ -62,14 +62,23 @@
 }
 
 .p-contact__btn {
-  padding: myrem(8) myrem(67) myrem(9) myrem(68);
+  width: 100%;
+  max-width: myrem(315);
+  padding: myrem(7) myrem(20) myrem(8) myrem(20);
   background: $green;
   color: $white;
   font-size: myrem(20);
   font-weight: 600;
   line-height: 1.65;
+  transition: background 0.3s ease, color 0.3s ease;
+  border: 1px solid $green;
 
   @include mq(md) {
-    padding: myrem(8) myrem(60) myrem(9) myrem(60);
+    max-width: myrem(300);
   }
+}
+
+.p-contact__btn:hover {
+  background: #E5F0DB;;
+  color: $green;
 }

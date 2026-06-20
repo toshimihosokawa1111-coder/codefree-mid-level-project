@@ -10,8 +10,7 @@
   transition: background 0.3s ease;
 
   @include mq(md) {
-    padding-top: myrem(25);
-    padding-bottom: myrem(29);
+    height: myrem(80);
   }
 }
 
@@ -24,6 +23,7 @@
   align-items: center;
 
   @include mq(md) {
+    height: myrem(80);
     padding-left: calc(80 / 1080 * 100vw);
     padding-right: calc(80 / 1080 * 100vw);
   }
@@ -62,23 +62,33 @@
   color: $white;
   text-transform: uppercase;
   position: relative;
+  display: flex;
+  align-items: center;
 
   @include mq(md) {
-    &::after {
-      content: "";
-      display: block;
-      width: 0;
-      height: 1px;
-      background: $white;
-      transition: width .3s;
-      position: absolute;
-      bottom: -3px;
-      left: 0;
-    }
+    height: myrem(80);
+  }
+}
 
-    &:hover::after {
-      width: 100%;
-    }
+.p-header__item a::after {
+  content: "";
+  display: none;
+
+  @include mq(md) {
+    display: block;
+    width: 0;
+    height: 1px;
+    background: $white;
+    transition: width .3s;
+    position: absolute;
+    bottom: myrem(28);
+    left: 0;
+  }
+}
+
+.p-header__item a:hover::after {
+  @include mq(md) {
+    width: 100%;
   }
 }
 

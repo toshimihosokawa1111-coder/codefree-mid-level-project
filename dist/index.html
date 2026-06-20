@@ -4,16 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no" />
-    <title>タイトル</title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta property="og:title" content="" />
-    <meta property="og:type" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:site_name" content="" />
-    <meta property="og:description" content="" />
-    <link rel="icon" href="" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>株式会社北村建設興業</title>
+    <meta
+      name="description"
+      content="長崎県長崎市の株式会社北村建設興業。新築・リフォーム・都市計画まで幅広く対応する建設会社です。"
+    />
+    <meta name="keywords" content="建設,新築,リフォーム,長崎,北村建設興業" />
+    <meta property="og:title" content="株式会社北村建設興業" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com/" />
+    <meta property="og:image" content="https://example.com/images/ogp.jpg" />
+    <meta property="og:site_name" content="株式会社北村建設興業" />
+    <meta
+      property="og:description"
+      content="長崎県長崎市の株式会社北村建設興業。新築・リフォーム・都市計画まで幅広く対応する建設会社です。"
+    />
+    <!-- favicon -->
+    <link rel="icon" href="./images/favicon2.ico" />
     <!-- Swiper CSS -->
     <link
       rel="stylesheet"
@@ -29,7 +37,6 @@
     <script defer src="./js/script.js"></script>
   </head>
   <body>
-
     <!-- mv header -->
 
     <div class="p-mv">
@@ -102,7 +109,7 @@
                 media="(min-width: 768px)"
                 srcset="./images/FirstView_01.jpg"
               />
-              <img src="./images/SP_FirstView-01.jpg" alt="" />
+              <img src="./images/SP_FirstView-01.jpg" alt="施工事例の外観" />
             </picture>
           </div>
           <div class="swiper-slide">
@@ -111,7 +118,7 @@
                 media="(min-width: 768px)"
                 srcset="./images/FirstView02.jpg"
               />
-              <img src="./images/SP_FirstView-02.jpg" alt="" />
+              <img src="./images/SP_FirstView-02.jpg" alt="施工事例の外観" />
             </picture>
           </div>
           <div class="swiper-slide">
@@ -120,7 +127,7 @@
                 media="(min-width: 768px)"
                 srcset="./images/FirstView03.jpg"
               />
-              <img src="./images/SP_FirstView-03.jpg" alt="" />
+              <img src="./images/SP_FirstView-03.jpg" alt="施工事例の外観" />
             </picture>
           </div>
         </div>
@@ -143,7 +150,7 @@
         </div>
         <div class="p-about__contents">
           <h2 class="p-about__title">伝統とイマを繋ぐ</h2>
-          <div class="p-about__text">
+          <div class="p-about__text" data-delay="500">
             <div class="p-about__text-item">
               <p>古来から伝わる伝統文化</p>
             </div>
@@ -385,7 +392,7 @@
         <div class="p-works-modal__image">
           <img
             src="images/PC_WORKS_modal_01.jpg"
-            alt=""
+            alt="施工事例"
             class="js-works-modal-img"
           />
         </div>
@@ -754,9 +761,18 @@
       <div class="p-footer__copyright">
         <p class="p-footer__copyright-text">
           &copy;copyright0000　<br class="u-mobile" />
-          kitamurakensetukogyo
+        kitamurakensetukogyo
         </p>
       </div>
     </footer>
+
+    <!-- pagetop -->
+    <button
+      class="c-pagetop js-pagetop"
+      type="button"
+      aria-label="トップへ戻る"
+    >
+      <span class="c-pagetop__icon"></span>
+    </button>
   </body>
 </html>

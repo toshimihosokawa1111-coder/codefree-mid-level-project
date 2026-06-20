@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.js-fade {
+  opacity: 0;
+  transform: translateY(myrem(30));
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.js-fade.is-show {
+  opacity: 1;
+  transform: translateY(0);
+}
