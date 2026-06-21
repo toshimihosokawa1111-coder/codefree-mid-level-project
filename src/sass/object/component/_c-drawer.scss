@@ -1,0 +1,40 @@
+@use "global" as *;
+
+.c-drawer {
+  position: fixed;
+  top: myrem(50);
+  right: 0;
+  width: calc(300 / 375 * 100%);
+  background: $green;
+  transform: translateX(200%);
+  transition: transform 0.5s ease;
+  z-index: 90;
+}
+
+.c-drawer.is-open {
+    transform: translateX(0);
+  }
+
+.c-drawer__nav {
+  padding-top: myrem(14);
+  padding-bottom: myrem(12);
+  padding-left: myrem(20);
+}
+
+.c-drawer__items {
+  display: flex;
+  flex-direction: column;
+  gap: myrem(25);
+}
+
+.c-drawer__item {
+
+}
+
+.c-drawer__link {
+  font-size: myrem(18);
+  font-weight: 600;
+  color: $white;
+  text-transform: uppercase;
+  line-height: 1.83333;
+}

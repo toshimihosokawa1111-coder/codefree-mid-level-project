@@ -1,0 +1,84 @@
+@use "global" as *;
+
+.p-contact {
+  background: $bg-light-green2;
+  padding-top: myrem(50);
+  padding-bottom: myrem(50);
+   @include mq(md) {
+     padding-top: myrem(82);
+     padding-bottom: myrem(80);
+   }
+}
+
+.p-contact__inner {
+  padding-left: myrem(30);
+  padding-right: myrem(30);
+
+  @include mq(md) {
+    padding-left: myrem(140);
+    padding-right: myrem(140);
+  }
+}
+
+.p-contact__title {
+  margin-left: myrem(9);
+
+}
+
+.p-contact__lead {
+  margin-top: myrem(35);
+  font-size: myrem(20);
+  font-weight: 500;
+  line-height: 1.65;
+}
+
+.p-contact__form {
+  margin-top: myrem(40);
+
+  @include mq(md) {
+    margin-top: myrem(69);
+  }
+}
+
+.p-contact__item {
+  margin-top: myrem(30);
+  @include mq(md) {
+    margin-top: myrem(50);
+  }
+}
+
+.p-contact__item:first-child {
+  margin-top: 0;
+}
+
+.p-contact__submit {
+  margin-top: myrem(51);
+  text-align: center;
+
+  @include mq(md) {
+    margin-top: myrem(80);
+
+  }
+}
+
+.p-contact__btn {
+  width: 100%;
+  max-width: myrem(315);
+  padding: myrem(7) myrem(20) myrem(8) myrem(20);
+  background: $green;
+  color: $white;
+  font-size: myrem(20);
+  font-weight: 600;
+  line-height: 1.65;
+  transition: background 0.3s ease, color 0.3s ease;
+  border: 1px solid $green;
+
+  @include mq(md) {
+    max-width: myrem(300);
+  }
+}
+
+.p-contact__btn:hover {
+  background: #E5F0DB;;
+  color: $green;
+}

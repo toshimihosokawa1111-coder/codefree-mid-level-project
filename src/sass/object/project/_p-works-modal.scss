@@ -1,0 +1,86 @@
+@use "global" as *;
+
+.p-works-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.p-works-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.p-works-modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.p-works-modal__inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: $white;
+  width: 90%;
+  max-width: myrem(450);
+  z-index: 1;
+  padding: myrem(15) myrem(15) 5px myrem(15);
+}
+
+.p-works-modal__close {
+  position: absolute;
+  top: myrem(0);
+  right: 0;
+  width: myrem(20);
+  height: myrem(20);
+  cursor: pointer;
+}
+
+.p-works-modal__close::before,
+.p-works-modal__close::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: myrem(15);
+  height: 1px;
+  background: $black;
+}
+
+.p-works-modal__close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.p-works-modal__close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.p-works-modal__image {
+}
+
+.p-works-modal__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.p-works-modal__caption {
+  margin-top: myrem(10);
+  font-size: myrem(16);
+  font-weight: 500;
+  line-height: 1.5625;
+  color: $black;
+}

@@ -1,0 +1,24 @@
+@use "global" as *;
+
+.c-section-title {
+  text-align: center;
+}
+
+.c-section-title__en {
+  color: $green;
+  font-size: myrem(30);
+  font-weight: 500;
+  line-height: 110%;
+  letter-spacing: 9px;
+  text-transform: uppercase;
+}
+
+.c-section-title__ja {
+  color: $black;
+  font-size: myrem(20);
+  font-weight: 500;
+  line-height: 165%;
+  letter-spacing: 6px;
+  margin-top: myrem(5);
+}
+

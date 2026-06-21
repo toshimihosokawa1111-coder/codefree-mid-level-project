@@ -1,0 +1,45 @@
+@use "global" as *;
+
+.p-company-detail {
+
+}
+
+.p-company-detail__address {
+  margin-top: myrem(8);
+}
+
+.p-company-detail__tel {
+  display: flex;
+  align-items: baseline;
+  margin-top: myrem(8);
+  gap: myrem(5);
+}
+
+.p-company-detail__tel .p-company-detail__label {
+  font-size: myrem(16);
+  font-weight: 600;
+  line-height: 1.5625;
+}
+
+.p-company-detail__tel .p-company-detail__value {
+  font-size: myrem(25);
+  font-weight: 600;
+  line-height: 1.5625;
+  //padding-left: myrem(5);
+}
+
+.p-company-detail__mail {
+  display: flex;
+  gap: myrem(19);
+  margin-top: myrem(11);
+}
+
+.p-company-detail__label {
+  font-size: myrem(16);
+
+}
+
+.p-company-detail__value {
+
+}
+

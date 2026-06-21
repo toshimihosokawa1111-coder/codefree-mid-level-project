@@ -1,0 +1,362 @@
+@use "global" as *;
+
+// ブロック
+
+.p-contact-item {
+  display: flex;
+  flex-direction: column;
+
+  @include mq(md) {
+    flex-direction: initial;
+    align-items: center;
+    column-gap: myrem(10);
+    justify-content: space-between;
+  }
+}
+
+// モディファイア
+
+.p-contact-item--name {
+  @include mq(md) {
+    column-gap: myrem(95);
+  }
+}
+
+.p-contact-item--email {
+  @include mq(md) {
+
+  }
+}
+
+.p-contact-item.p-contact-item--gender {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: myrem(45);
+
+  @include mq(md) {
+    margin-top: myrem(50);
+    column-gap: myrem(129);
+    justify-content: initial;
+  }
+}
+
+.p-contact-item--category {
+  @include mq(md) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: myrem(30);
+  }
+}
+
+.p-contact-item.p-contact-item--message {
+  @include mq(md) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: myrem(50);
+  }
+}
+
+.p-contact-item.p-contact-item--check {
+  margin-top: myrem(29);
+  align-items: flex-start;
+
+  @include mq(md) {
+    flex-direction: column;
+    margin-top: myrem(53);
+  }
+}
+
+.p-contact-item.p-contact-item--privacy {
+  @include mq(md) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: myrem(48);
+  }
+}
+
+// 子要素
+.p-contact-item__label {
+  font-size: myrem(20);
+  font-weight: 500;
+  line-height: 1.65;
+  white-space: nowrap;
+}
+
+.p-contact-item--email .p-contact-item__label {
+  @include mq(md) {
+    letter-spacing: -1px;
+    margin-top: 2px;
+  }
+}
+
+.p-contact-item--email .p-contact-item__required {
+  @include mq(md) {
+    margin-left: myrem(10);
+  }
+}
+
+.p-contact-item__label--check {
+  line-height: 1.35;
+}
+
+.p-contact-item__required {
+  margin-left: myrem(7);
+}
+
+.p-contact-item__sub {
+  display: block;
+
+  @include mq(md) {
+    display: inline;
+  }
+}
+
+.p-contact-item__sub .p-contact-item__required {
+  margin-left: myrem(20);
+}
+
+.p-contact-item__input,
+.p-contact-item__select {
+  width: 100%;
+  max-height: myrem(50);
+  font-size: myrem(16);
+  font-weight: 500;
+  line-height: 1.5625;
+  padding: myrem(13) myrem(17) myrem(12);
+
+  @include mq(md) {
+    width: calc(630 / 800 * 100%);
+    font-size: myrem(18);
+  }
+}
+
+.p-contact-item__input,
+.p-contact-item__select {
+
+  @include mq(md) {
+  }
+}
+
+.p-contact-item__radios {
+  display: flex;
+  align-items: center;
+  column-gap: myrem(33);
+
+  @include mq(md) {
+    column-gap: myrem(70);
+  }
+}
+
+.p-contact-item__radio {
+  display: flex;
+  align-items: center;
+  column-gap: myrem(8);
+  cursor: pointer;
+
+  @include mq(md) {
+    column-gap: myrem(15);
+  }
+}
+
+.p-contact-item__radio input {
+  background: $white;
+  appearance: none;
+  width: myrem(20);
+  height: myrem(20);
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+
+  &:checked::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: myrem(7);
+    height: myrem(7);
+    background: $black;
+    border-radius: 50%;
+  }
+
+  @include mq(md) {
+    margin-top: 0px;
+  }
+}
+
+.p-contact-item__radio span {
+  font-size: myrem(18);
+  font-weight: 500;
+  line-height: 1.38889;
+}
+
+.p-contact-item__select-wrap {
+  position: relative;
+
+  @include mq(md) {
+    width: calc(630 / 800 * 100%);
+  }
+}
+
+.p-contact-item__select-wrap::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: myrem(20);
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: myrem(10) solid transparent;
+  border-right: myrem(10) solid transparent;
+  border-top: myrem(12) solid $green;
+  pointer-events: none;
+}
+
+.p-contact-item__select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  @include mq(md) {
+    width: 100%;
+    padding: myrem(10) myrem(17) myrem(12) myrem(19);
+  }
+}
+
+.p-contact-item__textarea {
+  width: 100%;
+  padding: myrem(13) myrem(17) myrem(12);
+  min-height: myrem(200);
+
+  @include mq(md) {
+    margin-top: myrem(10);
+  }
+}
+
+.p-contact-item__checkboxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: myrem(16);
+  row-gap: myrem(5);
+  margin-top: 1px;
+
+  @include mq(md) {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: myrem(34);
+    row-gap: myrem(15);
+    margin-top: myrem(15);
+  }
+}
+
+.p-contact-item__checkbox {
+  display: flex;
+  align-items: center;
+  column-gap: myrem(10);
+  cursor: pointer;
+
+  @include mq(md) {
+    column-gap: myrem(20);
+  }
+}
+
+.p-contact-item__checkbox input {
+  margin: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  width: myrem(20);
+  height: myrem(20);
+  background: $white;
+  flex-shrink: 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.p-contact-item__checkbox input:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: myrem(6);
+  height: myrem(11);
+  border-right: 2px solid $green;
+  border-bottom: 2px solid $green;
+}
+
+.p-contact-item__checkbox span {
+  font-size: myrem(16);
+  font-weight: 500;
+  line-height: 1.5625;
+
+  @include mq(md) {
+    font-size: myrem(18);
+    line-height: 1.38889;
+    font-weight: 500;
+  }
+}
+
+.p-contact-item__policy {
+  padding: myrem(30) myrem(30) myrem(30) myrem(30);
+  height: myrem(323);
+  overflow-y: scroll;
+  background: $white;
+  position: relative;
+
+  @include mq(md) {
+    height: myrem(300);
+    margin-top: myrem(10);
+    padding: myrem(40);
+  }
+}
+
+.p-contact-item__policy::-webkit-scrollbar {
+  width: myrem(20);
+}
+
+.p-contact-item__policy::-webkit-scrollbar-track {
+  background: #D9D9D9;
+  margin-top: myrem(10);
+  margin-bottom: myrem(23);
+  border-right: myrem(10) solid transparent;
+  border-left: myrem(0) solid transparent;
+  background-clip: padding-box;
+}
+
+.p-contact-item__policy::-webkit-scrollbar-thumb {
+  background: #8B8B8B;
+  margin-top: myrem(10);
+  margin-bottom: myrem(23);
+  border-right: myrem(10) solid transparent;
+  border-left: myrem(0) solid transparent;
+  background-clip: padding-box;
+}
+
+.p-contact-item__policy p {
+  margin-top: myrem(33);
+  font-size: myrem(16);
+  font-weight: 500;
+  line-height: 2.0625;
+
+  @include mq(md) {
+    font-size: myrem(18);
+    line-height: 1.72222;
+  }
+}
+
+.p-contact-item__policy p:first-child {
+  margin-top: 0;
+}
+
+.p-contact-item__policy p:last-child {
+  display: block;
+  overflow: visible;
+}
+
+.p-contact-item__input,
+.p-contact-item__textarea,
+.p-contact-item__select {
+  outline: none;
+  border: none;
+}

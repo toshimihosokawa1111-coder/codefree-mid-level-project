@@ -1,0 +1,62 @@
+@use "global" as *;
+
+.c-pagetop {
+  position: fixed;
+  right: myrem(20);
+  bottom: myrem(60);
+  width: myrem(50);
+  height: myrem(50);
+  background: $green;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mq(md) {
+    width: myrem(68);
+    height: myrem(68);
+    right: myrem(60);
+  }
+}
+
+.c-pagetop__icon {
+  display: block;
+  position: relative;
+  width: myrem(16);
+  height: myrem(16);
+
+  @include mq(md) {
+    width: myrem(22);
+    height: myrem(20);
+  }
+}
+
+.c-pagetop__icon::before,
+.c-pagetop__icon::after {
+  content: "";
+  position: absolute;
+  width: myrem(18);
+  height: 4px;
+  background: $white;
+  border-radius: myrem(2);
+  bottom: 0;
+
+  @include mq(md) {
+    width: myrem(23);
+  }
+}
+
+.c-pagetop__icon::before {
+  left: 0px;
+  transform-origin: left bottom;
+  transform: rotate(-55deg);
+}
+
+.c-pagetop__icon::after {
+  right: 0px;
+  transform-origin: right bottom;
+  transform: rotate(55deg);
+}
