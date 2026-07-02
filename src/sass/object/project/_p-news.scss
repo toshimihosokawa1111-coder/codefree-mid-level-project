@@ -20,12 +20,12 @@
 }
 
 .p-news__contents {
-  margin-top: myrem(39);
+  margin-top: myrem(38);
 
   @include mq(md) {
     display: flex;
     column-gap: myrem(60);
-    margin-top: myrem(69);
+    margin-top: myrem(68);
   }
 }
 
@@ -81,7 +81,17 @@
   align-items: center;
   color: $border-green;
   position: relative;
+  transition: transform 0.4s ease;
 }
+
+.p-news__more-link:hover {
+  transform: none;
+
+  @include mq(md) {
+    transform: translate(10px);
+  }
+}
+
 
 .p-news__more-text {
   font-size: myrem(20);

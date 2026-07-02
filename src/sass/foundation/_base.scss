@@ -28,16 +28,24 @@ html {
 body {
   font-family: $font-main;
   color: $black;
+  letter-spacing: 0;
 }
 
 // ホバー
-a,
+/*a,
 button {
   @include mq(md) {
-    transition: .3s;
+    transition: .4s;
     &:hover {
       opacity: 0.7;
       cursor: pointer;
     }
   }
+} */
+
+// 画像の基本スタイル
+img {
+  width: 100%;
+  height: auto;
+  display: block;
 }

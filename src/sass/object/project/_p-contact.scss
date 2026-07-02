@@ -30,6 +30,10 @@
   font-size: myrem(20);
   font-weight: 500;
   line-height: 1.65;
+
+  @include mq(md) {
+    margin-top: myrem(33);
+  }
 }
 
 .p-contact__form {
@@ -52,7 +56,7 @@
 }
 
 .p-contact__submit {
-  margin-top: myrem(49);
+  margin-top: myrem(50);
   text-align: center;
 
   @include mq(md) {
@@ -70,8 +74,9 @@
   font-size: myrem(20);
   font-weight: 600;
   line-height: 1.65;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background 0.4s ease, color 0.4s ease;
   border: 1px solid $green;
+  cursor: pointer;
 
   @include mq(md) {
     max-width: myrem(300);
@@ -79,6 +84,6 @@
 }
 
 .p-contact__btn:hover {
-  background: #E5F0DB;;
+  background: $white;
   color: $green;
 }

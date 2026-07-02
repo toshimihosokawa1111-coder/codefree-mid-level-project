@@ -7,7 +7,7 @@
 
   @include mq(md) {
     padding-top: myrem(82);
-    padding-bottom: myrem(131);
+    padding-bottom: myrem(130);
   }
 }
 
@@ -16,21 +16,16 @@
 }
 
 .p-service__contents {
-  margin-top: myrem(38);
+  margin-top: myrem(37);
 
   @include mq(md) {
-    margin-top: myrem(67);
+    margin-top: myrem(66);
   }
 }
 
 .p-service__items {
   display: flex;
   flex-direction: column;
-
-
-  @include mq(md) {
-
-  }
 }
 
 .p-service__item {

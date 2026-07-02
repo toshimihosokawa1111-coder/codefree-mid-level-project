@@ -19,14 +19,20 @@
 }
 
 .p-news-item__link {
-
+  @include mq(md) {
+    transition: .4s;
+      &:hover {
+        opacity: 0.4;
+        cursor: pointer;
+      }
+  }
 }
 
 .p-news-item__body {
   display: flex;
   align-items:baseline;
   column-gap: myrem(19);
-  
+
   @include mq(md) {
     align-items: flex-start;
     column-gap: myrem(69);
