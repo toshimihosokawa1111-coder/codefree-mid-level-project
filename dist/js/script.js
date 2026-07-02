@@ -104,7 +104,7 @@ jQuery(function ($) {
   });
 
   // js-fadeを自動付与
-  $('.c-section-title, .p-about__title, .p-about__text, .p-service-item, .p-works-item, .p-news__column, .p-company__contents, .p-contact__lead, .p-contact-item, .p-contact__btn').each(function() {
+  $('.c-section-title, .p-about__title, .p-about__text, .p-service-item, .p-works-item, .p-news__column, .p-company__contents, .p-contact__lead, .p-contact-item, .p-contact-item__select, .p-contact__btn').each(function() {
     $(this).addClass('js-fade');
   });
 
