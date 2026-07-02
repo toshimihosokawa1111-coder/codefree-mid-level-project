@@ -2,7 +2,7 @@
 
 .p-works {
   padding-top: myrem(50);
-  padding-bottom: myrem(43);
+  padding-bottom: myrem(40);
 
   @include mq(md) {
     padding-top: myrem(80);
@@ -22,12 +22,12 @@
   margin-top: myrem(38);
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: myrem(22);
+  row-gap: myrem(20);
 
   @include mq(md) {
     margin-top: myrem(68);
     grid-template-columns: repeat(4, 1fr);
-    column-gap: myrem(40);
+    column-gap: calc(40 / 920 * 100%);
   }
 }
 

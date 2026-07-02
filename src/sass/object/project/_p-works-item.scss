@@ -4,6 +4,16 @@
 
 }
 
+.p-works-item {
+  @include mq(md) {
+    transition: opacity 0.4s;
+      &:hover {
+        opacity: 0.7;
+        cursor: pointer;
+      }
+  }
+}
+
 .p-works-item__image {
   width: 100%;
   aspect-ratio: 315 / 250;
@@ -12,7 +22,6 @@
 
   @include mq(md) {
     aspect-ratio: 1/1;
-
   }
 }
 
@@ -24,7 +33,7 @@
 }
 
 .p-works-item__content {
-  margin-top: myrem(9);
+  margin-top: myrem(11);
   display: flex;
   flex-wrap: wrap;
   width: 70%;

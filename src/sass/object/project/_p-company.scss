@@ -5,7 +5,7 @@
   padding-bottom: myrem(50);
 
   @include mq(md) {
-    padding-top: myrem(83);
+    padding-top: myrem(82);
     padding-bottom: myrem(140);
   }
 }
@@ -19,7 +19,7 @@
 }
 
 .p-company__contents {
-  margin-top: myrem(38);
+  margin-top: myrem(37);
 
   @include mq(md) {
     display: flex;
