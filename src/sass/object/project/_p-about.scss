@@ -32,10 +32,10 @@
 
 .p-about__contents {
   position: absolute;
-  top: calc(54 / 375 * 100vw);
-  left: 50%;
-  transform: translateX(-50%);
-  right: auto;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -45,8 +45,9 @@
   row-gap: calc(24 / 375 * 100vw);
 
   @include mq(md) {
+    height: auto;
+    width: auto;
     top: calc(113 / 1080 * 100vw);
-    right: auto;
     left: calc(135 / 1080 * 100vw);
     transform: none;
     flex-direction: row-reverse;

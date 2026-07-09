@@ -4,7 +4,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 1000;
   width: 100%;
   height: myrem(50);
   transition: background 0.4s ease;
@@ -15,6 +15,7 @@
 }
 
 .p-header__inner {
+  width: 100%;
   height: myrem(50);
   padding-left: myrem(20);
   padding-right: myrem(20);

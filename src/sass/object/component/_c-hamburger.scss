@@ -9,7 +9,7 @@
   width: myrem(72);
   height: myrem(51);
   background: $white;
-  padding-top: 3px;
+  padding-top: myrem(3);
   padding-bottom: myrem(6);
   cursor: pointer;
   flex-shrink: 0;
@@ -24,7 +24,7 @@
 .c-hamburger__line {
   display: block;
   width: myrem(32);
-  height: 4px;
+  height: myrem(4);
   background: $green;
   border-radius: 50px;
   transition: transform 0.4s ease, opacity 0.4s ease;

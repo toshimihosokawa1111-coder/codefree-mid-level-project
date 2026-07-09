@@ -71,7 +71,7 @@
 }
 
 .p-news__more {
-  padding: myrem(17) myrem(33) myrem(24);
+  padding: myrem(17) myrem(14) myrem(24) myrem(33);
   text-align: right;
 }
 
@@ -82,6 +82,8 @@
   color: $border-green;
   position: relative;
   transition: transform 0.4s ease;
+  padding-right: myrem(20);
+  padding-left: myrem(10);
 }
 
 .p-news__more-link:hover {
@@ -102,7 +104,7 @@
 .p-news__more-arrow {
   position: absolute;
   bottom: 4px;
-  left: 0;
+  left: myrem(10);
   width: myrem(80);
   height: myrem(1);
   background: $border-green;

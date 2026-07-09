@@ -1,7 +1,6 @@
 jQuery(function ($) {
 
- // ページトップボタン
-
+  // ページトップボタン
   var topBtn = $('.js-pagetop');
   topBtn.hide();
 
@@ -17,27 +16,20 @@ jQuery(function ($) {
   });
 
   topBtn.click(function () {
-    $('html, body').stop().animate({ scrollTop: 0 }, 300, 'swing');
+    $('html, body').stop(true).animate({ scrollTop: 0 }, 300, 'swing');
     return false;
   });
 
-  // スムーススクロール
-  $(document).on('click', 'a[href*="#"]', function (e) {
-    e.preventDefault();
-    let hash = $(this).attr('href');
-    if (hash === '#') return false;
-    let target = $(hash);
-    if (!target.length) return false;
-
-    let headerHeight = window.innerWidth >= 768 ? 80 : 50;
-    $('html,body').stop().animate({ scrollTop: target.offset().top - headerHeight }, 400, 'swing');
-    return false;
-  });
-
-    $('.p-header__logo a, .p-footer__logo a').on('click', function (e) {
-    e.preventDefault();
-    $('html, body').stop().animate({ scrollTop: 0 }, 300, 'swing');
-  });
+  function getHeaderHeight() {
+    const vw = window.innerWidth;
+    if (vw >= 1080) {
+      return 80;
+    } else if (vw >= 768) {
+      return Math.round(80 * vw / 1080);
+    } else {
+      return 50;
+    }
+  }
 
   // ヘッダーの背景色変更
   $(window).on('scroll', function() {
@@ -51,6 +43,13 @@ jQuery(function ($) {
     }
   });
 
+  // ロゴクリックでトップへ
+  $('.p-header__logo a, .p-footer__logo a').on('click', function (e) {
+    e.preventDefault();
+    $('html, body').stop().animate({ scrollTop: 0 }, 300, 'swing');
+  });
+  
+  // ドロワーを閉じる（スクロール時）
   $(window).on('scroll', function() {
     if ($('.js-drawer').hasClass('is-open')) {
       $('.js-drawer').removeClass('is-open');
@@ -72,7 +71,7 @@ jQuery(function ($) {
     autoHeight: false,
   });
 
-  // Works Modal
+  // Worksモーダル
   $('.js-works-item').on('click', function() {
     const modalSrc = $(this).data('modal-src');
     const modalCaption = $(this).data('modal-caption');
@@ -94,6 +93,13 @@ jQuery(function ($) {
     }
   });
 
+  // Worksアイテムのテキスト文字数に応じてクラスを付与する
+  $('.p-works-item__text').each(function() {
+    if ($(this).text().trim().length >= 10) {
+      $(this).closest('.p-works-item__content').addClass('is-short');
+    }
+  });
+
   // ハンバーガーメニュー単体の開閉
   $('.js-hamburger').on('click', function() {
     const isOpen = $('.js-drawer').toggleClass('is-open').hasClass('is-open');
@@ -107,7 +113,6 @@ jQuery(function ($) {
   $('.c-section-title, .p-about__title, .p-about__text, .p-service-item, .p-works-item, .p-news__column, .p-company__contents, .p-contact__lead, .p-contact-item, .p-contact-item--category, .p-contact__btn').each(function() {
     $(this).addClass('js-fade');
   });
-
 
   // スクロールアニメーション
   $(window).on('scroll', function() {

@@ -1,0 +1,5 @@
+
+AuthUserFile "/home/xs391444/be-kind-design.com/htpasswd/kitamura-kensetsu.be-kind-design.com/.htpasswd"
+AuthName "Member Site"
+AuthType BASIC
+require valid-user
