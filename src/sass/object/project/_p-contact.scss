@@ -11,12 +11,11 @@
 }
 
 .p-contact__inner {
-  padding-left: myrem(30);
-  padding-right: myrem(30);
 
   @include mq(md) {
-    padding-left: myrem(140);
-    padding-right: myrem(140);
+    max-width: 920px + $padding-pc * 2;
+    padding-left: myrem(90);
+    padding-right: myrem(90);
   }
 }
 
