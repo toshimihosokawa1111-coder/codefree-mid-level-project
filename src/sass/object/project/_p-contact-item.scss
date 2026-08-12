@@ -9,49 +9,38 @@
   @include mq(md) {
     flex-direction: initial;
     align-items: center;
-    column-gap: myrem(10);
-    justify-content: space-between;
   }
 }
 
 // モディファイア
 
-.p-contact-item--name {
-  @include mq(md) {
-    column-gap: myrem(95);
-  }
-}
-
-.p-contact-item--email {
-  @include mq(md) {
-
-  }
-}
-
-.p-contact-item.p-contact-item--gender {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  column-gap: myrem(45);
-
-  @include mq(md) {
-    margin-top: myrem(50);
-    column-gap: myrem(129);
-    justify-content: initial;
-  }
+.p-contact-item--email .p-contact-item__label .p-contact-item__required {
+  margin-left: myrem(2);
 }
 
 .p-contact-item--category {
   @include mq(md) {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    column-gap: myrem(30);
+      display: flex;
+      align-items: center;
+  }
+}
+
+.p-contact-item--gender {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  column-gap: myrem(45);
+
+  @include mq(md) {
+    margin-top: myrem(50);
+    justify-content: initial;
+    column-gap: inherit;
   }
 }
 
 .p-contact-item.p-contact-item--message {
   margin-top: myrem(30);
+
   @include mq(md) {
     flex-direction: column;
     align-items: flex-start;
@@ -65,7 +54,7 @@
 
   @include mq(md) {
     flex-direction: column;
-    margin-top: myrem(53);
+    margin-top: myrem(50);
   }
 }
 
@@ -73,7 +62,7 @@
   @include mq(md) {
     flex-direction: column;
     align-items: flex-start;
-    margin-top: myrem(48);
+    margin-top: myrem(50);
   }
 }
 
@@ -83,11 +72,15 @@
   font-weight: 500;
   line-height: 1.65;
   white-space: nowrap;
+
+  @include mq(md) {
+    width: myrem(170);
+    flex-shrink: 0;
+  }
 }
 
 .p-contact-item--email .p-contact-item__label {
   @include mq(md) {
-    letter-spacing: -1px;
     margin-top: 2px;
   }
 }
@@ -100,6 +93,10 @@
 
 .p-contact-item__label--check {
   line-height: 1.35;
+
+  @include mq(md) {
+    line-height: 1.65;
+  }
 }
 
 .p-contact-item__required {
@@ -128,8 +125,9 @@
   padding: myrem(15) myrem(17) myrem(12) myrem(20);
 
   @include mq(md) {
-    width: calc(630 / 800 * 100%);
+    flex: 1;
     font-size: myrem(18);
+    line-height: 1.38889;
   }
 }
 
@@ -147,8 +145,9 @@
   display: flex;
   align-items: center;
   column-gap: myrem(8);
-  cursor: pointer;
+
   @include mq(md) {
+    cursor: pointer;
     column-gap: myrem(15);
   }
 }
@@ -160,7 +159,6 @@
   height: myrem(20);
   border-radius: 50%;
   flex-shrink: 0;
-  cursor: pointer;
   position: relative;
 
   &:checked::after {
@@ -174,8 +172,9 @@
     background: $black;
     border-radius: 50%;
   }
-
+  
   @include mq(md) {
+    cursor: pointer;
     margin-top: 0px;
   }
 }
@@ -190,8 +189,7 @@
   position: relative;
 
   @include mq(md) {
-    width: calc(630 / 800 * 100%);
-
+    flex: 1;
   }
 }
 
@@ -213,11 +211,11 @@
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  cursor: pointer;
-
+  
   @include mq(md) {
+    cursor: pointer;
     width: 100%;
-    padding: myrem(10) myrem(17) myrem(12) myrem(19);
+    padding: myrem(13) myrem(17) myrem(12) myrem(19);
   }
 }
 
@@ -225,10 +223,13 @@
   width: 100%;
   padding: myrem(13) myrem(17) myrem(12);
   min-height: myrem(200);
+  line-height: 1.5625;
   word-break: break-all;
   resize: none;
-
+  font-size: myrem(18);
+  
   @include mq(md) {
+    line-height: 1.38889;
     margin-top: myrem(10);
   }
 }
@@ -245,18 +246,21 @@
     grid-template-columns: repeat(4, 1fr);
     column-gap: 0;
     row-gap: myrem(15);
-    margin-top: myrem(15);
+    margin-top: myrem(10);
   }
 }
 
+.p-contact-item__checkbox-wrap {
+
+}
+
 .p-contact-item__checkbox {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  column-gap: myrem(10);
-  cursor: pointer;
+  width: fit-content;
 
   @include mq(md) {
-    column-gap: myrem(20);
+    cursor: pointer;
   }
 }
 
@@ -269,7 +273,10 @@
   background: $white;
   flex-shrink: 0;
   position: relative;
-  cursor: pointer;
+
+  @include mq(md) {
+    cursor: pointer;
+  }
 }
 
 .p-contact-item__checkbox input:checked::after {
@@ -288,53 +295,60 @@
   font-size: myrem(16);
   font-weight: 500;
   line-height: 1.5625;
+  padding-left: myrem(10);
 
   @include mq(md) {
     font-size: myrem(18);
     line-height: 1.38889;
     font-weight: 500;
+    padding-left: myrem(20);
+    cursor: pointer;
   }
 }
 
 .p-contact-item__policy {
-  padding: myrem(31) myrem(30) myrem(30) myrem(30);
-  height: myrem(323);
-  overflow-y: scroll;
+  padding: myrem(10) myrem(10) myrem(23) myrem(10);
   background: $white;
   position: relative;
-
+  
   @include mq(md) {
-    height: myrem(300);
+    padding: myrem(10);
     margin-top: myrem(10);
-    padding: myrem(40);
   }
 }
 
-.p-contact-item__policy::-webkit-scrollbar {
-  width: myrem(20);
+.p-contact-item__policy-inner {
+  height: myrem(290);
+  overflow-y: scroll;
+  width: 100%;
+  
+  @include mq(md) {
+    height: myrem(280);
+
+  }
 }
 
-.p-contact-item__policy::-webkit-scrollbar-track {
-  background: #D9D9D9;
-  margin-top: myrem(10);
-  margin-bottom: myrem(23);
-  border-right: myrem(10) solid transparent;
-  border-left: myrem(0) solid transparent;
-  background-clip: padding-box;
+.p-contact-item__policy-contents {
+  padding: myrem(22) myrem(30) myrem(20) myrem(20);
+
+  @include mq(md) {
+    padding: myrem(30);
+  }
 }
 
-.p-contact-item__policy::-webkit-scrollbar-thumb {
-  background: #8B8B8B;
-  margin-top: myrem(10);
-  margin-bottom: myrem(23);
-  border-right: myrem(10) solid transparent;
-  border-left: myrem(0) solid transparent;
-  background-clip: padding-box;
+.p-contact-item__policy-inner::-webkit-scrollbar {
+  width: myrem(10);
+  background: #E3E3E3;
 }
 
-.p-contact-item__policy h3,
-.p-contact-item__policy p,
-.p-contact-item__policy li {
+.p-contact-item__policy-inner::-webkit-scrollbar-thumb {
+  background: #9B9B9B;
+  height: myrem(30);
+}
+
+.p-contact-item__policy-contents h3,
+.p-contact-item__policy-contents p,
+.p-contact-item__policy-contents li {
   font-size: myrem(16);
   font-weight: 500;
   line-height: 2.0625;
@@ -346,7 +360,8 @@
 }
 
 .p-contact-item__policy h3,
-.p-contact-item__policy-name {
+.p-contact-item__policy-name,
+.p-contact-item__policy ul {
   margin-top: myrem(33);
 }
 

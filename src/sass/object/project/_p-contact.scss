@@ -11,7 +11,6 @@
 }
 
 .p-contact__inner {
-
   @include mq(md) {
     max-width: 920px + $padding-pc * 2;
     padding-left: myrem(90);
@@ -39,7 +38,7 @@
   margin-top: myrem(40);
 
   @include mq(md) {
-    margin-top: myrem(69);
+    margin-top: myrem(70);
   }
 }
 
@@ -47,6 +46,12 @@
   margin-top: myrem(30);
   @include mq(md) {
     margin-top: myrem(50);
+  }
+    //独自に余白取るためのモディファイア
+    &--category {
+    @include mq(md) {
+      margin-top: myrem(50);
+    }
   }
 }
 
@@ -75,9 +80,9 @@
   line-height: 1.65;
   transition: background 0.4s ease, color 0.4s ease, opacity 1.5s ease, transform 1.5s ease;
   border: 1px solid $green;
-  cursor: pointer;
-
+  
   @include mq(md) {
+    cursor: pointer;
     max-width: myrem(300);
   }
 }

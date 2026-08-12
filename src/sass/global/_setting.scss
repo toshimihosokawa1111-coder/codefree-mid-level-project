@@ -8,7 +8,7 @@ $padding-pc: 30px;
 $padding-sp: 30px;
 
 // フォント
-$font-main: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "MS PMincho", serif;
+$font-main: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "MS PMincho", "Noto Serif JP", serif;
 
 // 色指定
 $black: #000;
@@ -22,6 +22,9 @@ $border-green:  #55A500;
 $breakpoints: (
   sm: 600,
   md: 768,
+  mdMid: 810,
+  mdPlus: 890,
+  tab: 980,
   lg: 1024,
   xl: 1440,
 );
@@ -30,6 +33,9 @@ $breakpoints: (
 $mediaquerys: (
   sm: "screen and (min-width: #{map-get($breakpoints,'sm')}px)",
   md: "screen and (min-width: #{map-get($breakpoints,'md')}px)",
+  mdMid: "screen and (min-width: #{map-get($breakpoints,'mdMid')}px)",
+  mdPlus: "screen and (min-width: #{map-get($breakpoints,'mdPlus')}px)",
+  tab: "screen and (min-width: #{map-get($breakpoints,'tab')}px)",
   lg: "screen and (min-width: #{map-get($breakpoints,'lg')}px)",
   xl: "screen and (min-width: #{map-get($breakpoints,'xl')}px)",
 );
