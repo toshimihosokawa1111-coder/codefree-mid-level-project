@@ -45,9 +45,6 @@
   width: myrem(20);
   height: myrem(20);
   cursor: pointer;
-
-  @include mq(md) {
-  }
 }
 
 .p-works-modal__close::before,

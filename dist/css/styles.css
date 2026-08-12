@@ -2261,6 +2261,7 @@ button {
   height: 1.25rem;
   cursor: pointer;
 }
+
 .p-works-modal__close::before,
 .p-works-modal__close::after {
   content: "";
