@@ -814,9 +814,12 @@ button {
   }
 }
 
+.p-contact-item--email .p-contact-item__label .p-contact-item__required {
+  margin-left: 0.4375rem;
+}
 @media screen and (min-width: 768px) {
-  .p-contact-item--email .p-contact-item__required {
-    margin-left: 0.625rem;
+  .p-contact-item--email .p-contact-item__label .p-contact-item__required {
+    margin-left: 0.1875rem;
   }
 }
 

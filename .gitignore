@@ -1,6 +1,7 @@
 gulp/node_modules/
 gulp/package-lock.json
+node_modules/
+package-lock.json
 .vscode
-
 # macOSの不要な隠しファイル
 .DS_Store

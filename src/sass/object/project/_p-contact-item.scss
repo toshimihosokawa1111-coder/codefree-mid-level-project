@@ -85,9 +85,10 @@
   }
 }
 
-.p-contact-item--email .p-contact-item__required {
+.p-contact-item--email .p-contact-item__label .p-contact-item__required {
+  margin-left: myrem(7);
   @include mq(md) {
-    margin-left: myrem(10);
+    margin-left: myrem(3);
   }
 }
 
