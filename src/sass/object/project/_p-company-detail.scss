@@ -18,8 +18,12 @@
 
 .p-company-detail__mail {
   display: flex;
-  gap: myrem(19);
-  margin-top: myrem(11);
+  gap: myrem(17);
+  margin-top: myrem(13);
+  
+  @include mq(md) {
+
+  }
 }
 
 .p-company-detail__tel,

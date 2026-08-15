@@ -495,10 +495,9 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 1.1875rem;
-  margin-top: 0.6875rem;
+  gap: 1.0625rem;
+  margin-top: 0.8125rem;
 }
-
 .p-company-detail__tel,
 .p-company-detail__mail {
   position: relative;
@@ -626,7 +625,7 @@ button {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    padding: 3.0625rem 2.5rem 2.625rem 0.625rem;
+    padding: 3.0625rem 2.5rem 2.5rem 0.625rem;
     position: relative;
     z-index: 0;
     margin-top: 11.25rem;
@@ -674,15 +673,6 @@ button {
 @media screen and (min-width: 768px) {
   .p-company__name {
     padding-right: 0.5rem;
-  }
-}
-
-.p-company__detail {
-  margin-top: 0.4375rem;
-}
-@media screen and (min-width: 768px) {
-  .p-company__detail {
-    margin-top: 0;
   }
 }
 
@@ -766,7 +756,7 @@ button {
 }
 
 .p-contact-item.p-contact-item--check {
-  margin-top: 1.8125rem;
+  margin-top: 1.875rem;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -781,6 +771,9 @@ button {
   }
 }
 
+.p-contact-item.p-contact-item--privacy {
+  margin-top: 1.8125rem;
+}
 @media screen and (min-width: 768px) {
   .p-contact-item.p-contact-item--privacy {
     -webkit-box-orient: vertical;
@@ -1404,8 +1397,8 @@ button {
 }
 
 .p-footer__copyright {
-  margin-top: 3.0625rem;
-  padding-top: 1.3125rem;
+  margin-top: 3.125rem;
+  padding-top: 1.25rem;
   padding-bottom: 1.3125rem;
   background: #4D9600;
   color: #fff;
@@ -2198,7 +2191,7 @@ button {
 }
 @media screen and (min-width: 768px) {
   .p-works-item__content {
-    margin-top: 1.1875rem;
+    margin-top: 1.25rem;
     display: block;
     width: 100%;
   }
@@ -2302,7 +2295,7 @@ button {
 @media screen and (min-width: 768px) {
   .p-works {
     padding-top: 5rem;
-    padding-bottom: 6.0625rem;
+    padding-bottom: 6rem;
   }
 }
 
