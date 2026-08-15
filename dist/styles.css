@@ -1393,8 +1393,6 @@ button {
 
 @media screen and (min-width: 768px) {
   .p-footer__sns-item a {
-    display: inline-block;
-    will-change: opacity;
     -webkit-transition: opacity 0.4s;
     transition: opacity 0.4s;
   }

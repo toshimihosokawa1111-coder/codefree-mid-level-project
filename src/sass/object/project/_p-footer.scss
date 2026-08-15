@@ -87,6 +87,8 @@
 
 .p-footer__sns-item a {
   @include mq(md) {
+    display: inline-block;
+    will-change: opacity;
     transition: opacity 0.4s;
 
     &:hover {
