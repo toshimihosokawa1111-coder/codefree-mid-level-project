@@ -791,12 +791,14 @@ button {
   font-size: 1.25rem;
   font-weight: 500;
   line-height: 1.65;
+  white-space: none;
 }
 @media screen and (min-width: 768px) {
   .p-contact-item__label {
     width: 10.625rem;
     -ms-flex-negative: 0;
         flex-shrink: 0;
+    white-space: nowrap;
   }
 }
 
@@ -1004,12 +1006,16 @@ button {
 }
 @media screen and (min-width: 768px) {
   .p-contact-item__checkboxes {
-    grid-template-columns: repeat(4, 1fr);
     -webkit-column-gap: 0;
        -moz-column-gap: 0;
             column-gap: 0;
     row-gap: 0.9375rem;
     margin-top: 0.625rem;
+  }
+}
+@media screen and (min-width: 980px) {
+  .p-contact-item__checkboxes {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -1398,7 +1404,7 @@ button {
 .p-footer__copyright {
   margin-top: 3.125rem;
   padding-top: 1.25rem;
-  padding-bottom: 1.3125rem;
+  padding-bottom: 1.375rem;
   background: #4D9600;
   color: #fff;
 }

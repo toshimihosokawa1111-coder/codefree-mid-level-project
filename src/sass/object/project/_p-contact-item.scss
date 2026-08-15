@@ -73,11 +73,12 @@
   font-size: myrem(20);
   font-weight: 500;
   line-height: 1.65;
-  //white-space: nowrap;
-
+  white-space: none;
+  
   @include mq(md) {
     width: myrem(170);
     flex-shrink: 0;
+    white-space: nowrap;
   }
 }
 
@@ -246,10 +247,14 @@
   width: 100%;
 
   @include mq(md) {
-    grid-template-columns: repeat(4, 1fr);
     column-gap: 0;
     row-gap: myrem(15);
     margin-top: myrem(10);
+  }
+  
+  @include mq(tab) {
+    grid-template-columns: repeat(4, 1fr);
+    
   }
 }
 
