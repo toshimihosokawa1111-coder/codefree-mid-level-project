@@ -5,23 +5,8 @@ $breakpointInner: 1080px;
 
 // ルートフォント設定
 html {
-  // 376px ~ 767px
+  // 全画面幅で固定
   font-size: 100%;
-
-  // ~ 374px
-  @media (max-width: 374px) {
-    font-size: vw(375, 14);
-  }
-
-  // 768px ~ インナー幅＋余白
-  @include mq(md) {
-    font-size: vw(strip-unit($breakpointInner), 16);
-  }
-
-  // インナー幅＋余白 ~
-  @media (min-width: $breakpointInner) {
-    font-size: 100%;
-  }
 
   scroll-behavior: smooth;
   scroll-padding-top: myrem(50);

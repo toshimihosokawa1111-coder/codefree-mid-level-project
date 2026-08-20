@@ -1,24 +1,22 @@
 jQuery(function ($) {
 
-  // ページトップボタン
-  var topBtn = $('.js-pagetop');
-  topBtn.hide();
+ // ページトップボタン
+ var topBtn = $('.js-pagetop');
 
-  $(window).scroll(function () {
-    let headerHeight = window.innerWidth >= 768 ? 81 : 51;
-    let aboutTop = $('#about').offset().top - headerHeight;
+ $(window).scroll(function() {
+   let aboutTop = $('#about').offset().top;
 
-    if ($(this).scrollTop() > aboutTop) {
-      topBtn.fadeIn();
-    } else {
-      topBtn.fadeOut();
-    }
-  });
+   if ($(this).scrollTop() > aboutTop) {
+     topBtn.addClass('is-show');
+   } else {
+     topBtn.removeClass('is-show');
+   }
+ });
 
-  topBtn.click(function () {
-    $('html, body').stop(true).animate({ scrollTop: 0 }, 300, 'swing');
-    return false;
-  });
+ topBtn.click(function () {
+   $('html, body').stop(true).animate({ scrollTop: 0 }, 300, 'swing');
+   return false;
+ });
 
   function getHeaderHeight() {
     const vw = window.innerWidth;
@@ -48,7 +46,7 @@ jQuery(function ($) {
     e.preventDefault();
     $('html, body').stop().animate({ scrollTop: 0 }, 300, 'swing');
   });
-  
+
   // ドロワーを閉じる（スクロール時）
   $(window).on('scroll', function() {
     if ($('.js-drawer').hasClass('is-open')) {

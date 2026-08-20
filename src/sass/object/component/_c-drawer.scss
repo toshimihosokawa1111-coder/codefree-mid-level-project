@@ -4,7 +4,7 @@
   position: fixed;
   top: myrem(50);
   right: 0;
-  width: calc(300 / 375 * 100%);
+  width: myrem(300);
   background: $green;
   transform: translateX(200%);
   transition: transform 0.5s ease;
@@ -12,26 +12,26 @@
 }
 
 .c-drawer.is-open {
-    transform: translateX(0);
-  }
+  transform: translateX(0);
+}
 
 .c-drawer__nav {
-  padding-top: myrem(14);
-  padding-bottom: myrem(12);
-  padding-left: myrem(20);
+  
 }
 
 .c-drawer__items {
   display: flex;
   flex-direction: column;
-  gap: myrem(25);
 }
 
 .c-drawer__item {
-
 }
 
 .c-drawer__link {
+  display: inline-block;
+  padding: myrem(12) myrem(20) myrem(13);
+  height: 100%;
+  width: 100%;
   font-size: myrem(18);
   font-weight: 600;
   color: $white;

@@ -1,37 +1,33 @@
 @use "global" as *;
 
 .p-service-item {
-  position: relative;
-
   @include mq(md) {
     display: flex;
-    align-items: center;
-    //max-width: myrem(920);
+    align-items: flex-start;
     width: 100%;
     margin-right: auto;
     margin-left: auto;
   }
 }
 
+.p-service-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
 .p-service-item__image {
   width: 100%;
-
   @include mq(md) {
-    width: calc(600 / 920 * 100%);
+    width: 65%;
     position: relative;
     z-index: 10;
   }
-}
 
-.p-service-item:nth-child(even) .p-service-item__image {
-  @include mq(md) {
-    margin-left: auto;
+  @include mq(tab) {
+    width: myrem(600);
   }
 }
 
 .p-service-item__image img {
-  width: 100%;
-  display: block;
   aspect-ratio: 315 / 220;
   object-fit: cover;
 
@@ -58,35 +54,79 @@
   }
 }
 
-
-
 .p-service-item__content {
+  flex: 1;
   background: $green;
   color: $white;
+  margin-top: myrem(5);
   padding: myrem(20) myrem(20) myrem(12);
-  margin-top: 5px;
 
   @include mq(md) {
-    width: calc(500 / 920 * 100%);
-    position: absolute;
-    top: myrem(140);
+    position: relative;
     z-index: 0;
+    margin-top: myrem(100);
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include mq(tab) {
+    margin-top: myrem(145);
+  }
+}
+
+.p-service-item__content::before {
+  @include mq(md) {
+    content: "";
+    width: myrem(400);
+    height: 100%;
+    background: $green;
+    position: absolute;
+  }
+
+  @include mq(tab) {
+    width: myrem(500);
   }
 }
 
 .p-service-item:nth-child(odd) .p-service-item__content {
   @include mq(md) {
-    padding: myrem(50) myrem(27) myrem(40) myrem(248);
-    right: 0;
-    left: auto;
+    padding: myrem(50) myrem(0) myrem(40) myrem(20);
+  }
+
+  @include mq(mdPlus) {
+    padding: myrem(50) myrem(0) myrem(40) myrem(50);
+  }
+
+  @include mq(tab) {
+    padding: myrem(50) myrem(0) myrem(40) myrem(68);
   }
 }
 
 .p-service-item:nth-child(even) .p-service-item__content {
   @include mq(md) {
-    padding: myrem(50) myrem(248) myrem(40) myrem(40);
+    padding: myrem(50) myrem(0) myrem(40) myrem(20);
+  }
+  @include mq(mdMid) {
+    padding: myrem(50) myrem(0) myrem(40) myrem(40);
+  }
+
+  @include mq(tab) {
+    padding: myrem(50) myrem(0) myrem(40) myrem(40);
+  }
+}
+
+.p-service-item:nth-child(odd) .p-service-item__content::before {
+  @include mq(md) {
+    top: 0;
+    right: 0;
+  }
+}
+
+.p-service-item:nth-child(even) .p-service-item__content::before {
+  @include mq(md) {
+    top: 0;
+    right: initial;
     left: 0;
-    right: auto;
   }
 }
 
@@ -95,6 +135,7 @@
   line-height: 1.25;
   font-weight: 600;
   color: $white;
+  position: relative;
 
   @include mq(md) {
     font-size: myrem(25);
@@ -109,6 +150,7 @@
   font-size: myrem(16);
   line-height: 1.5625;
   color: $white;
+  position: relative;
 
   @include mq(md) {
     font-size: myrem(16);

@@ -7,9 +7,10 @@
 .p-works-item {
   @include mq(md) {
     transition: opacity 0.4s;
+    cursor: pointer;
+
       &:hover {
         opacity: 0.7;
-        cursor: pointer;
       }
   }
 }
@@ -18,18 +19,16 @@
   width: 100%;
   aspect-ratio: 315 / 250;
   overflow: hidden;
-  cursor: pointer;
-
+  
   @include mq(md) {
     aspect-ratio: 1/1;
+    cursor: pointer;
   }
 }
 
 .p-works-item__image img {
-  width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
 .p-works-item__content {
@@ -39,7 +38,7 @@
   width: 70%;
 
   @include mq(md) {
-    margin-top: myrem(19);
+    margin-top: myrem(20);
     display: block;
     width: 100%;
   }
@@ -47,14 +46,12 @@
 
 .p-works-item__category {
   font-size: myrem(16);
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.5625;
-
 }
 
 .p-works-item__text {
   font-size: myrem(16);
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.5625;
-
 }
