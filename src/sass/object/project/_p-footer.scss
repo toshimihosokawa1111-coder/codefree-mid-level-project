@@ -14,8 +14,11 @@
   text-align: center;
 
   @include mq(md) {
-    padding-left: myrem(130);
-    padding-right: myrem(130);
+    padding-left: myrem(30);
+    padding-right: myrem(30);
+    max-width: myrem(782);
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -40,6 +43,7 @@
   @include mq(md) {
     margin-top: myrem(28);
     padding-top: myrem(28);
+    //max-width: myrem(722);
   }
 }
 
@@ -105,7 +109,7 @@
   color: $white;
 
   @include mq(md) {
-    margin-top: myrem(80);
+    margin-top: myrem(74);
     padding-top: myrem(30);
     padding-bottom: myrem(29);
   }

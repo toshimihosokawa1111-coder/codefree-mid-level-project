@@ -24,7 +24,7 @@
 
   @include mq(md) {
     display: flex;
-    column-gap: myrem(60);
+    column-gap: calc(60 / 920 * 100%);
     margin-top: myrem(68);
   }
 }
@@ -32,8 +32,7 @@
 .p-news__column {
   background: $white;
   @include mq(md) {
-    width: myrem(430);
-    //flex: 1;
+    flex: 1;
   }
 }
 
@@ -78,8 +77,8 @@
   text-align: right;
 
   @include mq(md) {
-    padding-top: myrem(13);
-    padding-bottom: myrem(11);
+    padding-top: myrem(23);
+    padding-bottom: myrem(21);
   }
 }
 
@@ -90,8 +89,7 @@
   color: $border-green;
   position: relative;
   transition: transform 0.4s ease;
-  padding-right: myrem(35);
-  padding-left: myrem(10);
+  padding-right: myrem(34);
   padding-bottom: myrem(10);
 }
 
@@ -110,19 +108,20 @@
   line-height: 1.65;
 
   @include mq(md) {
-    line-height: 2;
+    line-height: 1;
   }
 }
 
 .p-news__more-arrow {
   position: absolute;
-  bottom: myrem(14);
-  left: myrem(10);
+  top: myrem(28);
+  left: 0;
   width: myrem(80);
   height: myrem(1);
   background: $border-green;
-
+  
   @include mq(md) {
+    top: myrem(23);
     bottom: myrem(16);
   }
 }

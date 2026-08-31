@@ -41,8 +41,12 @@
   align-items: center;
   height: myrem(50);
 
+  @include mq-max("xs") {
+    font-size: myrem(16);
+  }
+
   @include mq(md) {
-    line-height: 2;
+    line-height: 1;
     height: myrem(80);
 
     &:hover {
@@ -106,7 +110,7 @@
     width: 0;
     height: 1px;
     background: $white;
-    transition: width 0.3s;
+    transition: width 0.4s;
     position: absolute;
     bottom: myrem(27);
     left: 0;

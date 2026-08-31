@@ -31,6 +31,10 @@
   flex-direction: row;
   column-gap: myrem(45);
 
+  @include mq-max("xs") {
+    column-gap: myrem(20);
+  }
+
   @include mq(md) {
     margin-top: myrem(50);
     justify-content: initial;
@@ -140,6 +144,10 @@
   align-items: center;
   column-gap: myrem(33);
 
+  @include mq-max("xs") {
+    column-gap: myrem(20)
+  }
+
   @include mq(md) {
     column-gap: myrem(70);
   }
@@ -149,9 +157,9 @@
   display: flex;
   align-items: center;
   column-gap: myrem(8);
+  cursor: pointer;
 
   @include mq(md) {
-    cursor: pointer;
     column-gap: myrem(15);
   }
 }
@@ -175,10 +183,10 @@
     height: myrem(7);
     background: $black;
     border-radius: 50%;
+    cursor: pointer;
   }
   
   @include mq(md) {
-    cursor: pointer;
     margin-top: 0px;
   }
 }
@@ -215,9 +223,9 @@
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  cursor: pointer;
   
   @include mq(md) {
-    cursor: pointer;
     width: 100%;
     padding: myrem(13) myrem(17) myrem(12) myrem(19);
   }
@@ -266,10 +274,7 @@
   display: inline-flex;
   align-items: center;
   width: fit-content;
-
-  @include mq(md) {
-    cursor: pointer;
-  }
+  cursor: pointer;
 }
 
 .p-contact-item__checkbox input {
@@ -281,10 +286,7 @@
   background: $white;
   flex-shrink: 0;
   position: relative;
-
-  @include mq(md) {
-    cursor: pointer;
-  }
+  cursor: pointer;
 }
 
 .p-contact-item__checkbox input:checked::after {
@@ -310,7 +312,6 @@
     line-height: 1.38889;
     font-weight: 500;
     padding-left: myrem(20);
-    cursor: pointer;
   }
 }
 
@@ -340,7 +341,7 @@
   padding: myrem(22) myrem(30) myrem(20) myrem(20);
 
   @include mq(md) {
-    padding: myrem(30);
+    padding: myrem(30) myrem(40) myrem(30) myrem(30);
   }
 }
 
@@ -373,10 +374,14 @@
   margin-top: myrem(33);
 }
 
+.p-contact-item__policy ul:nth-of-type(2) {
+  margin-top: 0;
+}
+
 .p-contact-item__policy ul {
-  list-style: disc;
+  //list-style: disc;
   list-style-position: outside;
-  padding-left: 1.5em;
+  //padding-left: 1.5em;
 }
 
 .p-contact-item__policy h3:first-child {

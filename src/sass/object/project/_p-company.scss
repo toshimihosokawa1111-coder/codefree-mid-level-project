@@ -43,7 +43,6 @@
 
 .p-company__map iframe {
   width: 100%;
-  height: 100%;
   aspect-ratio: 315 / 300;
   display: block;
 
@@ -57,19 +56,23 @@
   margin-top: myrem(19);
   background: $green;
   color: $white;
-  padding: myrem(19) myrem(20) myrem(10);
+  padding: myrem(19) myrem(20) myrem(12);
 
   @include mq(md) {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
-    padding: myrem(49) myrem(40) myrem(40) myrem(10);
+    padding: myrem(49) myrem(40) myrem(42) myrem(13);
     position: relative;
     z-index: 0;
-    margin-top: myrem(180);
+    margin-top: myrem(130);
     width: 60%;
     min-width: myrem(280);
+  }
+
+  @include mq(mdMid) {
+    margin-top: myrem(180);
   }
 
   @include mq(tab) {
@@ -81,7 +84,7 @@
 .p-company__info::before {
   @include mq(md) {
     content: "";
-    width: myrem(400);
+    width: calc(500 / 320 * 100%);
     height: 100%;
     background: $green;
     position: absolute;
@@ -90,7 +93,6 @@
   }
 
   @include mq(tab) {
-    width: myrem(500);
   }
 }
 
