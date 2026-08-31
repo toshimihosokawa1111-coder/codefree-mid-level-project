@@ -374,7 +374,8 @@
   margin-top: myrem(33);
 }
 
-.p-contact-item__policy ul:nth-of-type(2) {
+.p-contact-item__policy ul:nth-of-type(2),
+.p-contact-item__policy ul:nth-of-type(3) {
   margin-top: 0;
 }
 
