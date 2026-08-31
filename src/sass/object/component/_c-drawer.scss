@@ -28,9 +28,10 @@
 }
 
 .c-drawer__link {
-  display: inline-block;
-  padding: myrem(12) myrem(20) myrem(13);
-  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: myrem(20);
+  height: myrem(58);
   width: 100%;
   font-size: myrem(18);
   font-weight: 600;

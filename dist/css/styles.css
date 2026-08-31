@@ -190,9 +190,14 @@ button {
 }
 
 .c-drawer__link {
-  display: inline-block;
-  padding: 0.75rem 1.25rem 0.8125rem;
-  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 1.25rem;
+  height: 3.625rem;
   width: 100%;
   font-size: 1.125rem;
   font-weight: 600;
@@ -375,12 +380,6 @@ button {
   z-index: 0;
 }
 
-.p-about__image img {
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .p-about__contents {
   position: absolute;
   top: 0;
@@ -487,7 +486,7 @@ button {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  margin-top: 0.3125rem;
+  margin-top: 0.6875rem;
   gap: 0.3125rem;
 }
 
@@ -496,7 +495,7 @@ button {
   display: -ms-flexbox;
   display: flex;
   gap: 1.0625rem;
-  margin-top: 0.8125rem;
+  margin-top: 0.9375rem;
 }
 .p-company-detail__tel,
 .p-company-detail__mail {
@@ -512,7 +511,7 @@ button {
 .p-company-detail__tel .p-company-detail__value {
   font-size: 1.5625rem;
   font-weight: 600;
-  line-height: 1.5625;
+  line-height: 1;
 }
 
 .p-company-detail__tel .p-company-detail__value a {
@@ -591,7 +590,6 @@ button {
 
 .p-company__map iframe {
   width: 100%;
-  height: 100%;
   aspect-ratio: 315/300;
   display: block;
 }
@@ -608,7 +606,7 @@ button {
   margin-top: 1.1875rem;
   background: #4D9600;
   color: #fff;
-  padding: 1.1875rem 1.25rem 0.625rem;
+  padding: 1.1875rem 1.25rem 0.75rem;
 }
 @media screen and (min-width: 768px) {
   .p-company__info {
@@ -625,12 +623,17 @@ button {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    padding: 3.0625rem 2.5rem 2.5rem 0.625rem;
+    padding: 3.0625rem 2.5rem 2.625rem 0.8125rem;
     position: relative;
     z-index: 0;
-    margin-top: 11.25rem;
+    margin-top: 8.125rem;
     width: 60%;
     min-width: 17.5rem;
+  }
+}
+@media screen and (min-width: 890px) {
+  .p-company__info {
+    margin-top: 11.25rem;
   }
 }
 @media screen and (min-width: 980px) {
@@ -643,7 +646,7 @@ button {
 @media screen and (min-width: 768px) {
   .p-company__info::before {
     content: "";
-    width: 25rem;
+    width: 156.25%;
     height: 100%;
     background: #4D9600;
     position: absolute;
@@ -651,12 +654,6 @@ button {
     right: 0;
   }
 }
-@media screen and (min-width: 980px) {
-  .p-company__info::before {
-    width: 31.25rem;
-  }
-}
-
 .p-company__info-inner {
   position: relative;
 }
@@ -726,6 +723,13 @@ button {
   -webkit-column-gap: 2.8125rem;
      -moz-column-gap: 2.8125rem;
           column-gap: 2.8125rem;
+}
+@media screen and (max-width: 325px) {
+  .p-contact-item--gender {
+    -webkit-column-gap: 1.25rem;
+       -moz-column-gap: 1.25rem;
+            column-gap: 1.25rem;
+  }
 }
 @media screen and (min-width: 768px) {
   .p-contact-item--gender {
@@ -874,6 +878,13 @@ button {
      -moz-column-gap: 2.0625rem;
           column-gap: 2.0625rem;
 }
+@media screen and (max-width: 325px) {
+  .p-contact-item__radios {
+    -webkit-column-gap: 1.25rem;
+       -moz-column-gap: 1.25rem;
+            column-gap: 1.25rem;
+  }
+}
 @media screen and (min-width: 768px) {
   .p-contact-item__radios {
     -webkit-column-gap: 4.375rem;
@@ -892,10 +903,10 @@ button {
   -webkit-column-gap: 0.5rem;
      -moz-column-gap: 0.5rem;
           column-gap: 0.5rem;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .p-contact-item__radio {
-    cursor: pointer;
     -webkit-column-gap: 0.9375rem;
        -moz-column-gap: 0.9375rem;
             column-gap: 0.9375rem;
@@ -925,10 +936,10 @@ button {
   height: 0.4375rem;
   background: #000;
   border-radius: 50%;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .p-contact-item__radio input {
-    cursor: pointer;
     margin-top: 0px;
   }
 }
@@ -969,10 +980,10 @@ button {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .p-contact-item__select {
-    cursor: pointer;
     width: 100%;
     padding: 0.8125rem 1.0625rem 0.75rem 1.1875rem;
   }
@@ -1029,11 +1040,7 @@ button {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-}
-@media screen and (min-width: 768px) {
-  .p-contact-item__checkbox {
-    cursor: pointer;
-  }
+  cursor: pointer;
 }
 
 .p-contact-item__checkbox input {
@@ -1047,11 +1054,7 @@ button {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   position: relative;
-}
-@media screen and (min-width: 768px) {
-  .p-contact-item__checkbox input {
-    cursor: pointer;
-  }
+  cursor: pointer;
 }
 
 .p-contact-item__checkbox input:checked::after {
@@ -1079,7 +1082,6 @@ button {
     line-height: 1.38889;
     font-weight: 500;
     padding-left: 1.25rem;
-    cursor: pointer;
   }
 }
 
@@ -1111,7 +1113,7 @@ button {
 }
 @media screen and (min-width: 768px) {
   .p-contact-item__policy-contents {
-    padding: 1.875rem;
+    padding: 1.875rem 2.5rem 1.875rem 1.875rem;
   }
 }
 
@@ -1147,10 +1149,12 @@ button {
   margin-top: 2.0625rem;
 }
 
+.p-contact-item__policy ul:nth-of-type(2) {
+  margin-top: 0;
+}
+
 .p-contact-item__policy ul {
-  list-style: disc;
   list-style-position: outside;
-  padding-left: 1.5em;
 }
 
 .p-contact-item__policy h3:first-child {
@@ -1280,10 +1284,10 @@ button {
   transition: background 0.4s ease, color 0.4s ease, opacity 1.5s ease, transform 1.5s ease;
   transition: background 0.4s ease, color 0.4s ease, opacity 1.5s ease, transform 1.5s ease, -webkit-transform 1.5s ease;
   border: 1px solid #4D9600;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .p-contact__btn {
-    cursor: pointer;
     max-width: 18.75rem;
   }
 }
@@ -1309,8 +1313,11 @@ button {
 }
 @media screen and (min-width: 768px) {
   .p-footer__inner {
-    padding-left: 8.125rem;
-    padding-right: 8.125rem;
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+    max-width: 48.875rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1412,7 +1419,7 @@ button {
 }
 @media screen and (min-width: 768px) {
   .p-footer__copyright {
-    margin-top: 5rem;
+    margin-top: 4.625rem;
     padding-top: 1.875rem;
     padding-bottom: 1.8125rem;
   }
@@ -1494,9 +1501,14 @@ button {
           align-items: center;
   height: 3.125rem;
 }
+@media screen and (max-width: 325px) {
+  .p-header__logo a {
+    font-size: 1rem;
+  }
+}
 @media screen and (min-width: 768px) {
   .p-header__logo a {
-    line-height: 2;
+    line-height: 1;
     height: 5rem;
   }
   .p-header__logo a:hover {
@@ -1577,8 +1589,8 @@ button {
     width: 0;
     height: 1px;
     background: #fff;
-    -webkit-transition: width 0.3s;
-    transition: width 0.3s;
+    -webkit-transition: width 0.4s;
+    transition: width 0.4s;
     position: absolute;
     bottom: 1.6875rem;
     left: 0;
@@ -1598,24 +1610,21 @@ button {
 .p-mv {
   position: relative;
   width: 100%;
-  height: 100%;
-  aspect-ratio: 375/601;
-}
-@media screen and (min-width: 768px) {
-  .p-mv {
-    aspect-ratio: 1080/800;
-    margin-bottom: 0;
-  }
 }
 
 .p-mv__swiper {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   z-index: 10;
   overflow: hidden;
+  aspect-ratio: 375/601;
+}
+@media screen and (min-width: 768px) {
+  .p-mv__swiper {
+    aspect-ratio: 1080/800;
+  }
 }
 
 .swiper-slide {
@@ -1666,7 +1675,7 @@ button {
 }
 
 .p-mv__phrase {
-  font-size: 1.875rem;
+  font-size: 8vw;
   line-height: 2;
   font-weight: 600;
   text-shadow: 5px 5px 5px #000;
@@ -1695,7 +1704,7 @@ button {
   border-bottom: 1px solid #55A500;
 }
 .p-news-item__link {
-  display: inline-block;
+  display: block;
   padding-top: 0.8125rem;
   padding-bottom: 0.8125rem;
 }
@@ -1721,22 +1730,23 @@ button {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  -webkit-column-gap: 1.1875rem;
-     -moz-column-gap: 1.1875rem;
-          column-gap: 1.1875rem;
+  -webkit-column-gap: 6.9090909091%;
+     -moz-column-gap: 6.9090909091%;
+          column-gap: 6.9090909091%;
 }
 @media screen and (min-width: 768px) {
   .p-news-item__body {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    -webkit-column-gap: 4.3125rem;
-       -moz-column-gap: 4.3125rem;
-            column-gap: 4.3125rem;
+    -webkit-column-gap: 17.6923076923%;
+       -moz-column-gap: 17.6923076923%;
+            column-gap: 17.6923076923%;
   }
 }
 
 .p-news-item__date {
+  width: 3.3125rem;
   font-size: 1rem;
   font-weight: 500;
   line-height: 2.0625;
@@ -1784,9 +1794,9 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-column-gap: 3.75rem;
-       -moz-column-gap: 3.75rem;
-            column-gap: 3.75rem;
+    -webkit-column-gap: 6.5217391304%;
+       -moz-column-gap: 6.5217391304%;
+            column-gap: 6.5217391304%;
     margin-top: 4.25rem;
   }
 }
@@ -1796,7 +1806,9 @@ button {
 }
 @media screen and (min-width: 768px) {
   .p-news__column {
-    width: 26.875rem;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
   }
 }
 
@@ -1829,8 +1841,8 @@ button {
 }
 @media screen and (min-width: 768px) {
   .p-news__more {
-    padding-top: 0.8125rem;
-    padding-bottom: 0.6875rem;
+    padding-top: 1.4375rem;
+    padding-bottom: 1.3125rem;
   }
 }
 
@@ -1851,8 +1863,7 @@ button {
   transition: -webkit-transform 0.4s ease;
   transition: transform 0.4s ease;
   transition: transform 0.4s ease, -webkit-transform 0.4s ease;
-  padding-right: 2.1875rem;
-  padding-left: 0.625rem;
+  padding-right: 2.125rem;
   padding-bottom: 0.625rem;
 }
 
@@ -1874,20 +1885,21 @@ button {
 }
 @media screen and (min-width: 768px) {
   .p-news__more-text {
-    line-height: 2;
+    line-height: 1;
   }
 }
 
 .p-news__more-arrow {
   position: absolute;
-  bottom: 0.875rem;
-  left: 0.625rem;
+  top: 1.75rem;
+  left: 0;
   width: 5rem;
   height: 0.0625rem;
   background: #55A500;
 }
 @media screen and (min-width: 768px) {
   .p-news__more-arrow {
+    top: 1.4375rem;
     bottom: 1rem;
   }
 }
@@ -2013,6 +2025,11 @@ button {
     padding-right: 0;
   }
 }
+@media screen and (min-width: 890px) {
+  .p-service-item__content {
+    margin-top: 7.5rem;
+  }
+}
 @media screen and (min-width: 980px) {
   .p-service-item__content {
     margin-top: 9.0625rem;
@@ -2022,45 +2039,35 @@ button {
 @media screen and (min-width: 768px) {
   .p-service-item__content::before {
     content: "";
-    width: 25rem;
+    width: 156.25%;
     height: 100%;
     background: #4D9600;
     position: absolute;
   }
 }
-@media screen and (min-width: 980px) {
-  .p-service-item__content::before {
-    width: 31.25rem;
-  }
-}
 
 @media screen and (min-width: 768px) {
   .p-service-item:nth-child(odd) .p-service-item__content {
-    padding: 3.125rem 0rem 2.5rem 1.25rem;
+    padding: 3.125rem 1.25rem 2.5rem 1.875rem;
   }
 }
 @media screen and (min-width: 890px) {
   .p-service-item:nth-child(odd) .p-service-item__content {
-    padding: 3.125rem 0rem 2.5rem 3.125rem;
+    padding: 3.125rem 1.25rem 2.5rem 2.5rem;
   }
 }
 @media screen and (min-width: 980px) {
   .p-service-item:nth-child(odd) .p-service-item__content {
-    padding: 3.125rem 0rem 2.5rem 4.25rem;
+    padding: 3.125rem 1.25rem 2.5rem 4.25rem;
   }
 }
 
 @media screen and (min-width: 768px) {
   .p-service-item:nth-child(even) .p-service-item__content {
-    padding: 3.125rem 0rem 2.5rem 1.25rem;
+    padding: 3.125rem 0rem 2.5rem 1.5625rem;
   }
 }
-@media screen and (min-width: 810px) {
-  .p-service-item:nth-child(even) .p-service-item__content {
-    padding: 3.125rem 0rem 2.5rem 2.5rem;
-  }
-}
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 890px) {
   .p-service-item:nth-child(even) .p-service-item__content {
     padding: 3.125rem 0rem 2.5rem 2.5rem;
   }
@@ -2089,7 +2096,12 @@ button {
   color: #fff;
   position: relative;
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 325px) {
+  .p-service-item__title {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 890px) {
   .p-service-item__title {
     font-size: 1.5625rem;
     font-weight: 600;
@@ -2105,7 +2117,17 @@ button {
   color: #fff;
   position: relative;
 }
+@media screen and (max-width: 325px) {
+  .p-service-item__text {
+    font-size: 0.75rem;
+  }
+}
 @media screen and (min-width: 768px) {
+  .p-service-item__text {
+    font-size: 0.875rem;
+  }
+}
+@media screen and (min-width: 890px) {
   .p-service-item__text {
     font-size: 1rem;
     font-weight: 600;
@@ -2177,7 +2199,6 @@ button {
 @media screen and (min-width: 768px) {
   .p-works-item__image {
     aspect-ratio: 1/1;
-    cursor: pointer;
   }
 }
 

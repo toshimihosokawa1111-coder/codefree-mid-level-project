@@ -69,48 +69,45 @@
     padding-right: 0;
   }
 
+  @include mq(mdMid) {
+    margin-top: myrem(120);
+  }
+
   @include mq(tab) {
-    margin-top: myrem(145);
+    margin-top: myrem(145)
   }
 }
 
 .p-service-item__content::before {
   @include mq(md) {
     content: "";
-    width: myrem(400);
+    width: calc(500 / 320 * 100%);
     height: 100%;
     background: $green;
     position: absolute;
-  }
-
-  @include mq(tab) {
-    width: myrem(500);
   }
 }
 
 .p-service-item:nth-child(odd) .p-service-item__content {
   @include mq(md) {
-    padding: myrem(50) myrem(0) myrem(40) myrem(20);
+    padding: myrem(50) myrem(20) myrem(40) myrem(30);
   }
 
-  @include mq(mdPlus) {
-    padding: myrem(50) myrem(0) myrem(40) myrem(50);
+  @include mq(mdMid) {
+    padding: myrem(50) myrem(20) myrem(40) myrem(40);
   }
 
   @include mq(tab) {
-    padding: myrem(50) myrem(0) myrem(40) myrem(68);
+    padding: myrem(50) myrem(20) myrem(40) myrem(68);
   }
 }
 
 .p-service-item:nth-child(even) .p-service-item__content {
   @include mq(md) {
-    padding: myrem(50) myrem(0) myrem(40) myrem(20);
-  }
-  @include mq(mdMid) {
-    padding: myrem(50) myrem(0) myrem(40) myrem(40);
+    padding: myrem(50) myrem(0) myrem(40) myrem(25);
   }
 
-  @include mq(tab) {
+  @include mq(mdMid) {
     padding: myrem(50) myrem(0) myrem(40) myrem(40);
   }
 }
@@ -137,7 +134,11 @@
   color: $white;
   position: relative;
 
-  @include mq(md) {
+  @include mq-max("xs") {
+    font-size: myrem(16);
+  }
+
+  @include mq(mdMid) {
     font-size: myrem(25);
     font-weight: 600;
     line-height: 1.32;
@@ -152,10 +153,19 @@
   color: $white;
   position: relative;
 
+  @include mq-max("xs") {
+    font-size: myrem(12);
+  }
+  
   @include mq(md) {
+    font-size: myrem(14);
+  }
+
+  @include mq(mdMid) {
     font-size: myrem(16);
     font-weight: 600;
     line-height: 1.5625;
     margin-top: myrem(19);
   }
 }
+

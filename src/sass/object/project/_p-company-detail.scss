@@ -11,7 +11,7 @@
 .p-company-detail__tel {
   display: flex;
   align-items: baseline;
-  margin-top: myrem(5);
+  margin-top: myrem(11);
   gap: myrem(5);
 }
 
@@ -19,7 +19,7 @@
 .p-company-detail__mail {
   display: flex;
   gap: myrem(17);
-  margin-top: myrem(13);
+  margin-top: myrem(15);
   
   @include mq(md) {
 
@@ -40,7 +40,7 @@
 .p-company-detail__tel .p-company-detail__value {
   font-size: myrem(25);
   font-weight: 600;
-  line-height: 1.5625;
+  line-height: 1;
 }
 
 .p-company-detail__tel .p-company-detail__value a {

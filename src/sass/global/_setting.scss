@@ -22,8 +22,7 @@ $border-green:  #55A500;
 $breakpoints: (
   sm: 600,
   md: 768,
-  mdMid: 810,
-  mdPlus: 890,
+  mdMid: 890,
   tab: 980,
   lg: 1024,
   xl: 1440,
@@ -34,7 +33,6 @@ $mediaquerys: (
   sm: "screen and (min-width: #{map-get($breakpoints,'sm')}px)",
   md: "screen and (min-width: #{map-get($breakpoints,'md')}px)",
   mdMid: "screen and (min-width: #{map-get($breakpoints,'mdMid')}px)",
-  mdPlus: "screen and (min-width: #{map-get($breakpoints,'mdPlus')}px)",
   tab: "screen and (min-width: #{map-get($breakpoints,'tab')}px)",
   lg: "screen and (min-width: #{map-get($breakpoints,'lg')}px)",
   xl: "screen and (min-width: #{map-get($breakpoints,'xl')}px)",
@@ -46,3 +44,21 @@ $mediaquerys: (
     @content;
   }
 }
+
+// ブレイクポイント（max-width用）
+$breakpoints-max: (
+  xs: 325,
+);
+
+// メディアクエリ（max-width用）
+$mediaquerys-max: (
+  xs: "screen and (max-width: #{map-get($breakpoints-max,'xs')}px)",
+);
+
+// メディアクエリを "@include mq-max(){}" で書くことができる（max-width）
+@mixin mq-max($mediaquery: xs) {
+  @media #{map-get($mediaquerys-max, $mediaquery)} {
+    @content;
+  }
+}
+

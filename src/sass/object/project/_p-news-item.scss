@@ -8,7 +8,7 @@
 }
 
 .p-news-item__link {
-  display: inline-block;
+  display: block;
   padding-top: myrem(13);
   padding-bottom: myrem(13);
 
@@ -29,15 +29,16 @@
 .p-news-item__body {
   display: flex;
   align-items:baseline;
-  column-gap: myrem(19);
+  column-gap: calc(19 / 275 * 100%);
 
   @include mq(md) {
     align-items: flex-start;
-    column-gap: myrem(69);
+    column-gap: calc(69 / 390 * 100%);
   }
 }
 
 .p-news-item__date {
+  width: myrem(53);
   font-size: myrem(16);
   font-weight: 500;
   line-height: 2.0625;
