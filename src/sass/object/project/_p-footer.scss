@@ -23,6 +23,7 @@
 }
 
 .p-footer__logo a {
+  display: inline-block;
   font-size: myrem(20);
   font-weight: 500;
   line-height: 1.65;
@@ -63,6 +64,7 @@
 }
 
 .p-footer__item a {
+  display: inline-block;
   font-size: myrem(18);
   font-weight: 500;
   line-height: 1.83333;
