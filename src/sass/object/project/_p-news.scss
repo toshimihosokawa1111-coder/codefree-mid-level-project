@@ -71,14 +71,12 @@
 }
 
 .p-news__more {
-  padding-top: myrem(18);
-  padding-bottom: myrem(13);
-
+  margin-top: myrem(18);
+  padding-bottom: myrem(19);
   text-align: right;
 
   @include mq(md) {
-    padding-top: myrem(23);
-    padding-bottom: myrem(21);
+    margin-top: myrem(23);
   }
 }
 
@@ -90,7 +88,11 @@
   position: relative;
   transition: transform 0.4s ease;
   padding-right: myrem(34);
-  padding-bottom: myrem(10);
+  padding-bottom: myrem(4);
+  
+  @include mq(md) {
+    padding-bottom: myrem(12);
+  }
 }
 
 .p-news__more-link:hover {
@@ -114,15 +116,13 @@
 
 .p-news__more-arrow {
   position: absolute;
-  top: myrem(28);
   left: 0;
-  width: myrem(80);
+  bottom: myrem(8);
+  width: 100%;
   height: myrem(1);
   background: $border-green;
   
   @include mq(md) {
-    top: myrem(23);
-    bottom: myrem(16);
   }
 }
 
@@ -137,7 +137,8 @@
   bottom: myrem(-10);
   right: myrem(11);
   width: 1px;
-  height: myrem(20);
+  height: myrem(18);
+  bottom: myrem(-7);
 
   @include mq(md) {
     right: myrem(10);
@@ -145,9 +146,9 @@
 }
 
 .p-news__more-arrow::after {
-  top: 0.5px;
-  right: myrem(-1);
-  width: myrem(17);
+  top: myrem(0.5);
+  right: 0;
+  width: myrem(16);
   height: 1px;
   transform-origin: right top;
   transform: rotate(40deg);

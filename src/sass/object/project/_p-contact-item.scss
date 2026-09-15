@@ -77,7 +77,6 @@
   font-size: myrem(20);
   font-weight: 500;
   line-height: 1.65;
-  white-space: none;
   
   @include mq(md) {
     width: myrem(170);
@@ -172,6 +171,7 @@
   border-radius: 50%;
   flex-shrink: 0;
   position: relative;
+  cursor: pointer;
 
   &:checked::after {
     content: "";
@@ -183,7 +183,6 @@
     height: myrem(7);
     background: $black;
     border-radius: 50%;
-    cursor: pointer;
   }
   
   @include mq(md) {
@@ -254,15 +253,18 @@
   margin-top: 1px;
   width: 100%;
 
+  @include mq-max("xs") {
+    grid-template-columns: 1fr;
+  }
+
   @include mq(md) {
     column-gap: 0;
     row-gap: myrem(15);
     margin-top: myrem(10);
   }
-  
+
   @include mq(tab) {
     grid-template-columns: repeat(4, 1fr);
-    
   }
 }
 
@@ -305,13 +307,13 @@
   font-size: myrem(16);
   font-weight: 500;
   line-height: 1.5625;
-  padding-left: myrem(10);
+  margin-left: myrem(10);
 
   @include mq(md) {
     font-size: myrem(18);
     line-height: 1.38889;
     font-weight: 500;
-    padding-left: myrem(20);
+    margin-left: myrem(20);
   }
 }
 

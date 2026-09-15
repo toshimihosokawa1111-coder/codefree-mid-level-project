@@ -3,7 +3,7 @@
 .p-service-item {
   @include mq(md) {
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
     width: 100%;
     margin-right: auto;
     margin-left: auto;
@@ -20,6 +20,7 @@
     width: 65%;
     position: relative;
     z-index: 10;
+    padding-bottom: myrem(50);
   }
 
   @include mq(tab) {
@@ -58,23 +59,15 @@
   flex: 1;
   background: $green;
   color: $white;
-  margin-top: myrem(5);
   padding: myrem(20) myrem(20) myrem(12);
+  margin-top: myrem(5);
 
   @include mq(md) {
     position: relative;
     z-index: 0;
-    margin-top: myrem(100);
     padding-left: 0;
     padding-right: 0;
-  }
-
-  @include mq(mdMid) {
-    margin-top: myrem(120);
-  }
-
-  @include mq(tab) {
-    margin-top: myrem(145)
+    margin-top: 0;
   }
 }
 
@@ -90,15 +83,15 @@
 
 .p-service-item:nth-child(odd) .p-service-item__content {
   @include mq(md) {
-    padding: myrem(50) myrem(20) myrem(40) myrem(30);
+    padding: myrem(50) myrem(10) myrem(40) myrem(30);
   }
 
   @include mq(mdMid) {
-    padding: myrem(50) myrem(20) myrem(40) myrem(40);
+    padding: myrem(50) myrem(10) myrem(40) myrem(40);
   }
 
   @include mq(tab) {
-    padding: myrem(50) myrem(20) myrem(40) myrem(68);
+    padding: myrem(50) myrem(10) myrem(40) myrem(68);
   }
 }
 

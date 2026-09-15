@@ -5,9 +5,10 @@
 }
 
 .p-works-item {
+  cursor: pointer;
+  
   @include mq(md) {
     transition: opacity 0.4s;
-    cursor: pointer;
 
       &:hover {
         opacity: 0.7;
@@ -34,12 +35,15 @@
   margin-top: myrem(11);
   display: flex;
   flex-wrap: wrap;
-  width: 70%;
+  width: 100%;
+
+  &.is-short {
+    display: block;
+  }
 
   @include mq(md) {
     margin-top: myrem(20);
     display: block;
-    width: 100%;
   }
 }
 

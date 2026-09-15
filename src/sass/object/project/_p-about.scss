@@ -26,7 +26,7 @@
   align-items: center;
   justify-content: center;
   padding-left: 0;
-
+  padding-top: myrem(5);
 
   @include mq(md) {
     align-items: flex-start;
@@ -39,7 +39,6 @@
   display: flex;
   align-items: center;
   column-gap: calc(26 / 375 * 100vw);
-  margin-top: myrem(5);
 
   @include mq(md) {
     flex-direction: column;
