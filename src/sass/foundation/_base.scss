@@ -41,3 +41,10 @@ img {
   height: auto;
   display: block;
 }
+
+// tel:リンクをPCのみ無効化
+@include mq(md) {
+   a[href^="tel:"] {
+    pointer-events: none;
+  }
+}

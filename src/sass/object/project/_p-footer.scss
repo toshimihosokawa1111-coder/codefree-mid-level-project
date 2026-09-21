@@ -9,17 +9,13 @@
 }
 
 .p-footer__inner {
-  padding-left: myrem(30);
-  padding-right: myrem(30);
-  text-align: center;
-
   @include mq(md) {
-    padding-left: myrem(30);
-    padding-right: myrem(30);
     max-width: myrem(782);
-    margin-left: auto;
-    margin-right: auto;
   }
+}
+
+.p-footer__logo {
+  text-align: center;
 }
 
 .p-footer__logo a {
@@ -131,5 +127,10 @@
   }
 }
 
+.p-footer__copyright-text span {
+  @include mq(md) {
+    margin-left: myrem(20);
+  }
+}
 
 

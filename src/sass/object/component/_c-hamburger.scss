@@ -7,12 +7,13 @@
   align-items: center;
   row-gap: myrem(8);
   width: myrem(72);
-  height: myrem(51);
+  height: myrem(50);
   background: $white;
   cursor: pointer;
   flex-shrink: 0;
   position: relative;
   z-index: 1000;
+  padding-bottom: myrem(4);
 
   @include mq(md) {
     display: none;
