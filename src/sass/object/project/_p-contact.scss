@@ -41,12 +41,6 @@
   @include mq(md) {
     margin-top: myrem(50);
   }
-    //独自に余白取るためのモディファイア
-    &--category {
-    @include mq(md) {
-      margin-top: myrem(50);
-    }
-  }
 }
 
 .p-contact__item:first-child {

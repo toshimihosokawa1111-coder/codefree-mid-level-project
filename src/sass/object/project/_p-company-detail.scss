@@ -47,11 +47,6 @@
   display: inline-block;
   color: inherit;
   height: 100%;
-
-  @include mq(md) {
-    cursor: default;
-    pointer-events: none;
-  }
 }
 
 .p-company-detail__mail .p-company-detail__value a {

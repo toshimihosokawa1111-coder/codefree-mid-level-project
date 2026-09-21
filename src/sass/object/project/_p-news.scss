@@ -15,9 +15,6 @@
 
 }
 
-.p-news__title {
-  margin-left: myrem(9);
-}
 
 .p-news__contents {
   margin-top: myrem(38);
@@ -61,6 +58,7 @@
 .p-news__body {
   padding-left: myrem(20);
   padding-right: myrem(20);
+  padding-bottom: myrem(19);
 
 }
 
@@ -72,7 +70,6 @@
 
 .p-news__more {
   margin-top: myrem(18);
-  padding-bottom: myrem(19);
   text-align: right;
 
   @include mq(md) {
@@ -119,11 +116,8 @@
   left: 0;
   bottom: myrem(8);
   width: 100%;
-  height: myrem(1);
+  height: 1px;
   background: $border-green;
-  
-  @include mq(md) {
-  }
 }
 
 .p-news__more-arrow::before,
@@ -134,7 +128,6 @@
 }
 
 .p-news__more-arrow::before {
-  bottom: myrem(-10);
   right: myrem(11);
   width: 1px;
   height: myrem(18);
