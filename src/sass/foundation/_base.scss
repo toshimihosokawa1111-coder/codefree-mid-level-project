@@ -23,18 +23,6 @@ body {
   letter-spacing: 0;
 }
 
-// ホバー
-/*a,
-button {
-  @include mq(md) {
-    transition: .4s;
-    &:hover {
-      opacity: 0.7;
-      cursor: pointer;
-    }
-  }
-} */
-
 // 画像の基本スタイル
 img {
   width: 100%;

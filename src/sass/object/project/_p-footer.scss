@@ -38,9 +38,8 @@
   padding-top: myrem(20);
   border-top: 1px solid $black;
   @include mq(md) {
-    margin-top: myrem(28);
+    margin-top: myrem(27);
     padding-top: myrem(28);
-    //max-width: myrem(722);
   }
 }
 
@@ -52,11 +51,8 @@
   row-gap: myrem(5);
 
   @include mq(md) {
-    gap: myrem(50)
+    gap: myrem(51)
   }
-}
-
-.p-footer__item {
 }
 
 .p-footer__item a {
@@ -81,10 +77,10 @@
   justify-content: center;
   gap: myrem(30);
   margin-top: myrem(27);
-}
 
-.p-footer__sns-item {
-
+  @include mq(md) {
+    margin-top: myrem(28);
+  }
 }
 
 .p-footer__sns-item a {
@@ -129,8 +125,6 @@
 
 .p-footer__copyright-text span {
   @include mq(md) {
-    margin-left: myrem(20);
+    margin-left: 1em;
   }
 }
-
-

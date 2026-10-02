@@ -13,7 +13,6 @@
   flex-shrink: 0;
   position: relative;
   z-index: 1000;
-  padding-bottom: myrem(4);
 
   @include mq(md) {
     display: none;

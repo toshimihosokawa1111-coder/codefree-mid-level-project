@@ -1,12 +1,8 @@
 @use "global" as *;
 
 .p-works-item {
-
-}
-
-.p-works-item {
   cursor: pointer;
-  
+
   @include mq(md) {
     transition: opacity 0.4s;
 
@@ -20,7 +16,7 @@
   width: 100%;
   aspect-ratio: 315 / 250;
   overflow: hidden;
-  
+
   @include mq(md) {
     aspect-ratio: 1/1;
   }
@@ -37,7 +33,7 @@
   flex-wrap: wrap;
   width: 100%;
 
-  &.is-short {
+  &.is-long {
     display: block;
   }
 

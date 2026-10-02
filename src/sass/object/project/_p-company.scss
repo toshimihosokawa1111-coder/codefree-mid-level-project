@@ -10,10 +10,6 @@
   }
 }
 
-.p-company__inner {
-
-}
-
 .p-company__contents {
   margin-top: myrem(37);
 
@@ -79,9 +75,6 @@
     top: 0;
     right: 0;
   }
-
-  @include mq(tab) {
-  }
 }
 
 .p-company__info-inner {
@@ -96,12 +89,9 @@
   font-size: myrem(20);
   font-weight: 600;
   line-height: 1.65;
+
+  @include mq-max("xs") {
+    font-size: myrem(16);
+  }
 }
-
-.p-company__detail {
-
-
-}
-
-
 

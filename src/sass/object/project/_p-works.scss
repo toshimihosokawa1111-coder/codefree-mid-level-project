@@ -10,10 +10,6 @@
   }
 }
 
-.p-works__inner {
-
-}
-
 .p-works__items {
   margin-top: myrem(38);
   display: grid;
@@ -25,8 +21,4 @@
     grid-template-columns: repeat(4, 1fr);
     column-gap: calc(40 / 920 * 100%);
   }
-}
-
-.p-works__item {
-
 }

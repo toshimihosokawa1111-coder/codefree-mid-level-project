@@ -94,7 +94,7 @@ jQuery(function ($) {
   // Worksアイテムのテキスト文字数に応じてクラスを付与する
   $('.p-works-item__text').each(function() {
     if ($(this).text().trim().length >= 10) {
-      $(this).closest('.p-works-item__content').addClass('is-short');
+      $(this).closest('.p-works-item__content').addClass('is-long');
     }
   });
 
@@ -108,7 +108,7 @@ jQuery(function ($) {
   });
 
   // js-fadeを自動付与
-  $('.c-section-title, .p-about__title, .p-about__text, .p-service-item, .p-works-item, .p-news__column, .p-company__contents, .p-contact__lead, .p-contact-item, .p-contact-item--category, .p-contact__btn').each(function() {
+  $('.c-section-title, .p-about__title, .p-about__text, .p-service-item, .p-works-item, .p-news__column, .p-company__contents, .p-contact__lead, .p-contact-item, .p-contact__btn').each(function() {
     $(this).addClass('js-fade');
   });
 
