@@ -683,106 +683,6 @@ button {
   }
 }
 
-.p-contact-item--gender {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-column-gap: 3.0625rem;
-     -moz-column-gap: 3.0625rem;
-          column-gap: 3.0625rem;
-}
-@media screen and (max-width: 340px) {
-  .p-contact-item--gender {
-    -webkit-column-gap: 1.25rem;
-       -moz-column-gap: 1.25rem;
-            column-gap: 1.25rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .p-contact-item--gender {
-    -webkit-column-gap: 0;
-       -moz-column-gap: 0;
-            column-gap: 0;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .p-contact-item.p-contact-item--message {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-}
-
-.p-contact-item.p-contact-item--check {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-@media screen and (min-width: 768px) {
-  .p-contact-item.p-contact-item--check {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .p-contact-item.p-contact-item--privacy {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-}
-
-.p-contact-item__label--check {
-  line-height: 1.35;
-}
-@media screen and (min-width: 768px) {
-  .p-contact-item__label--check {
-    line-height: 1.65;
-    width: auto;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .p-contact-item__label--privacy {
-    width: auto;
-  }
-}
-
-.p-contact-item__label--check {
-  line-height: 1.35;
-}
-@media screen and (min-width: 768px) {
-  .p-contact-item__label--check {
-    line-height: 1.65;
-    width: auto;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .p-contact-item__label--privacy {
-    width: auto;
-  }
-}
-
 .p-contact-item__label {
   font-size: 1.25rem;
   font-weight: 500;
@@ -798,7 +698,7 @@ button {
 }
 
 @media screen and (min-width: 768px) {
-  .p-contact-item--email .p-contact-item__label .p-contact-item__required {
+  .p-contact-item--email .p-contact-item__required {
     margin-left: 0.1875rem;
   }
 }
@@ -1163,6 +1063,76 @@ button {
 .p-contact-item__input::placeholder,
 .p-contact-item__textarea::placeholder {
   color: #A0A0A0;
+}
+
+.p-contact-item--gender {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-column-gap: 3.0625rem;
+     -moz-column-gap: 3.0625rem;
+          column-gap: 3.0625rem;
+}
+@media screen and (max-width: 340px) {
+  .p-contact-item--gender {
+    -webkit-column-gap: 1.25rem;
+       -moz-column-gap: 1.25rem;
+            column-gap: 1.25rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .p-contact-item--gender {
+    -webkit-column-gap: 0;
+       -moz-column-gap: 0;
+            column-gap: 0;
+  }
+}
+
+.p-contact-item--message,
+.p-contact-item--check,
+.p-contact-item--privacy {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+@media screen and (min-width: 768px) {
+  .p-contact-item--message,
+  .p-contact-item--check,
+  .p-contact-item--privacy {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.p-contact-item__label--check {
+  line-height: 1.35;
+}
+@media screen and (min-width: 768px) {
+  .p-contact-item__label--check {
+    line-height: 1.65;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .p-contact-item__label--privacy {
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .p-contact-item__label--privacy {
+    width: auto;
+  }
 }
 
 .p-contact {

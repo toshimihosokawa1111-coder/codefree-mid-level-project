@@ -11,75 +11,6 @@
   }
 }
 
-// モディファイア
-
-.p-contact-item--gender {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  column-gap: myrem(49);
-
-  @include mq-max("xs") {
-    column-gap: myrem(20);
-  }
-
-  @include mq(md) {
-    column-gap: 0;
-  }
-}
-
-.p-contact-item.p-contact-item--message {
-  @include mq(md) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-.p-contact-item.p-contact-item--check {
-  align-items: flex-start;
-
-  @include mq(md) {
-    flex-direction: column;
-  }
-}
-
-.p-contact-item.p-contact-item--privacy {
-  @include mq(md) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-.p-contact-item__label--check {
-  line-height: 1.35;
-
-  @include mq(md) {
-    line-height: 1.65;
-    width: auto;
-  }
-}
-
-.p-contact-item__label--privacy {
-  @include mq(md) {
-    width: auto;
-  }
-}
-
-.p-contact-item__label--check {
-  line-height: 1.35;
-
-  @include mq(md) {
-    line-height: 1.65;
-    width: auto;
-  }
-}
-
-.p-contact-item__label--privacy {
-  @include mq(md) {
-    width: auto;
-  }
-}
-
 // 子要素
 .p-contact-item__label {
   font-size: myrem(20);
@@ -93,7 +24,7 @@
   }
 }
 
-.p-contact-item--email .p-contact-item__label .p-contact-item__required {
+.p-contact-item--email .p-contact-item__required {
   @include mq(md) {
     margin-left: myrem(3);
   }
@@ -391,4 +322,51 @@
 .p-contact-item__input::placeholder,
 .p-contact-item__textarea::placeholder {
   color: #A0A0A0;
+}
+
+// モディファイア
+.p-contact-item--gender {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  column-gap: myrem(49);
+
+  @include mq-max("xs") {
+    column-gap: myrem(20);
+  }
+
+  @include mq(md) {
+    column-gap: 0;
+  }
+}
+
+.p-contact-item--message,
+.p-contact-item--check,
+.p-contact-item--privacy {
+  align-items: flex-start;
+
+  @include mq(md) {
+    flex-direction: column;
+  }
+}
+
+.p-contact-item__label--check {
+  line-height: 1.35;
+
+  @include mq(md) {
+    line-height: 1.65;
+    width: auto;
+  }
+}
+
+.p-contact-item__label--privacy {
+  @include mq(md) {
+    width: auto;
+  }
+}
+
+.p-contact-item__label--privacy {
+  @include mq(md) {
+    width: auto;
+  }
 }
