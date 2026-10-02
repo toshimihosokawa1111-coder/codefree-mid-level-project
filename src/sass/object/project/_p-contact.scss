@@ -16,7 +16,6 @@
   }
 }
 
-
 .p-contact__lead {
   margin-top: myrem(35);
   font-size: myrem(20);
@@ -69,7 +68,7 @@
   transition: background 0.4s ease, color 0.4s ease, opacity 1.5s ease, transform 1.5s ease;
   border: 1px solid $green;
   cursor: pointer;
-  
+
   @include mq(md) {
     max-width: myrem(300);
   }

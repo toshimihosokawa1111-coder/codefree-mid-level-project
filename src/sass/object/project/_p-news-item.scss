@@ -2,9 +2,6 @@
 
 .p-news-item {
   border-bottom: 1px solid $border-green;
-  
-  @include mq(md) {
-  }
 }
 
 .p-news-item__link {

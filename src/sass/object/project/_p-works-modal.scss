@@ -35,7 +35,7 @@
   width: 90%;
   max-width: myrem(450);
   z-index: 1;
-  padding: myrem(15) myrem(15) 5px myrem(15);
+  padding: myrem(15) myrem(15) myrem(5) myrem(15);
 }
 
 .p-works-modal__close {
@@ -65,12 +65,6 @@
 
 .p-works-modal__close::after {
   transform: translate(-50%, -50%) rotate(-45deg);
-}
-
-.p-works-modal__image {
-}
-
-.p-works-modal__image img {
 }
 
 .p-works-modal__caption {

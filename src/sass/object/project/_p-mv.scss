@@ -57,7 +57,7 @@
   font-size: calc(30 / 375 * 100vw);
   line-height: 2;
   font-weight: 600;
-  text-shadow: 5px 5px 5px $black;
+  text-shadow: myrem(5) myrem(5) myrem(5) $black;
   letter-spacing: 0.3em;
   white-space: nowrap;
 

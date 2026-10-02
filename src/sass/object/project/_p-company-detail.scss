@@ -1,9 +1,5 @@
 @use "global" as *;
 
-.p-company-detail {
-
-}
-
 .p-company-detail__address {
   margin-top: myrem(8);
 }
@@ -15,15 +11,10 @@
   gap: myrem(5);
 }
 
-
 .p-company-detail__mail {
   display: flex;
   gap: myrem(17);
   margin-top: myrem(15);
-  
-  @include mq(md) {
-
-  }
 }
 
 .p-company-detail__tel,
@@ -35,12 +26,20 @@
   font-size: myrem(16);
   font-weight: 600;
   line-height: 1.5625;
+
+  @include mq-max("xs") {
+    font-size: myrem(14);
+  }
 }
 
 .p-company-detail__tel .p-company-detail__value {
   font-size: myrem(25);
   font-weight: 600;
   line-height: 1;
+
+  @include mq-max("xs") {
+    font-size: myrem(18);
+  }
 }
 
 .p-company-detail__tel .p-company-detail__value a {
@@ -65,6 +64,10 @@
   font-size: myrem(16);
   font-weight: 600;
   line-height: 1.5625;
+
+  @include mq-max("xs") {
+    font-size: myrem(14);
+  }
 }
 
 

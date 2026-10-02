@@ -1,7 +1,6 @@
 @use "global" as *;
 
 // ブロック
-
 .p-contact-item {
   display: flex;
   flex-direction: column;
@@ -14,81 +13,40 @@
 
 // モディファイア
 
-.p-contact-item--email .p-contact-item__label .p-contact-item__required {
-  margin-left: myrem(2);
-}
-
-.p-contact-item--category {
-  @include mq(md) {
-      display: flex;
-      align-items: center;
-  }
-}
-
 .p-contact-item--gender {
   display: flex;
   align-items: center;
   flex-direction: row;
-  column-gap: myrem(45);
+  column-gap: myrem(49);
 
   @include mq-max("xs") {
     column-gap: myrem(20);
   }
 
   @include mq(md) {
-    margin-top: myrem(50);
-    justify-content: initial;
-    column-gap: inherit;
+    column-gap: 0;
   }
 }
 
 .p-contact-item.p-contact-item--message {
-  margin-top: myrem(30);
-
   @include mq(md) {
     flex-direction: column;
     align-items: flex-start;
-    margin-top: myrem(50);
   }
 }
 
 .p-contact-item.p-contact-item--check {
-  margin-top: myrem(30);
   align-items: flex-start;
 
   @include mq(md) {
     flex-direction: column;
-    margin-top: myrem(50);
   }
 }
 
 .p-contact-item.p-contact-item--privacy {
-  margin-top: myrem(29);
-
   @include mq(md) {
     flex-direction: column;
     align-items: flex-start;
-    margin-top: myrem(50);
-  }
-}
-
-// 子要素
-.p-contact-item__label {
-  font-size: myrem(20);
-  font-weight: 500;
-  line-height: 1.65;
-  
-  @include mq(md) {
-    width: myrem(170);
-    flex-shrink: 0;
-    white-space: nowrap;
-  }
-}
-
-.p-contact-item--email .p-contact-item__label .p-contact-item__required {
-  margin-left: myrem(7);
-  @include mq(md) {
-    margin-left: myrem(3);
   }
 }
 
@@ -97,6 +55,53 @@
 
   @include mq(md) {
     line-height: 1.65;
+    width: auto;
+  }
+}
+
+.p-contact-item__label--privacy {
+  @include mq(md) {
+    width: auto;
+  }
+}
+
+.p-contact-item__label--check {
+  line-height: 1.35;
+
+  @include mq(md) {
+    line-height: 1.65;
+    width: auto;
+  }
+}
+
+.p-contact-item__label--privacy {
+  @include mq(md) {
+    width: auto;
+  }
+}
+
+// 子要素
+.p-contact-item__label {
+  font-size: myrem(20);
+  font-weight: 500;
+  line-height: 1.65;
+
+  @include mq(md) {
+    width: myrem(170);
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+}
+
+.p-contact-item--email .p-contact-item__label .p-contact-item__required {
+  @include mq(md) {
+    margin-left: myrem(3);
+  }
+}
+
+.p-contact-item__label--message {
+  @include mq(md) {
+    width: auto;
   }
 }
 
@@ -135,7 +140,7 @@
 .p-contact-item__radios {
   display: flex;
   align-items: center;
-  column-gap: myrem(33);
+  column-gap: myrem(39);
 
   @include mq-max("xs") {
     column-gap: myrem(20)
@@ -153,7 +158,7 @@
   cursor: pointer;
 
   @include mq(md) {
-    column-gap: myrem(15);
+    column-gap: myrem(19);
   }
 }
 
@@ -165,6 +170,7 @@
   border-radius: 50%;
   flex-shrink: 0;
   position: relative;
+  margin: myrem(3) 0 myrem(2) myrem(3);
   cursor: pointer;
 
   &:checked::after {
@@ -213,7 +219,7 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   cursor: pointer;
-  
+
   @include mq(md) {
     width: 100%;
     padding: myrem(13) myrem(17) myrem(12) myrem(19);
@@ -228,7 +234,7 @@
   word-break: break-all;
   resize: none;
   font-size: myrem(18);
-  
+
   @include mq(md) {
     line-height: 1.38889;
     margin-top: myrem(10);
@@ -237,28 +243,16 @@
 
 .p-contact-item__checkboxes {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 2px;
+  grid-template-columns: repeat(auto-fit, minmax(myrem(142), 1fr));
   row-gap: myrem(5);
-  margin-top: 1px;
   width: 100%;
-
-  @include mq-max("xs") {
-    grid-template-columns: 1fr;
-  }
 
   @include mq(md) {
     column-gap: 0;
     row-gap: myrem(15);
     margin-top: myrem(10);
+    grid-template-columns: repeat(auto-fit, minmax(myrem(166), 1fr));
   }
-
-  @include mq(tab) {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-.p-contact-item__checkbox-wrap {
 
 }
 
@@ -311,7 +305,7 @@
   padding: myrem(10) myrem(10) myrem(23) myrem(10);
   background: $white;
   position: relative;
-  
+
   @include mq(md) {
     padding: myrem(10);
     margin-top: myrem(10);
@@ -322,10 +316,9 @@
   height: myrem(290);
   overflow-y: scroll;
   width: 100%;
-  
+
   @include mq(md) {
     height: myrem(280);
-
   }
 }
 
@@ -372,9 +365,7 @@
 }
 
 .p-contact-item__policy ul {
-  //list-style: disc;
   list-style-position: outside;
-  //padding-left: 1.5em;
 }
 
 .p-contact-item__policy h3:first-child {
