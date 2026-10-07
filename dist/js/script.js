@@ -18,17 +18,6 @@ jQuery(function ($) {
    return false;
  });
 
-  function getHeaderHeight() {
-    const vw = window.innerWidth;
-    if (vw >= 1080) {
-      return 80;
-    } else if (vw >= 768) {
-      return Math.round(80 * vw / 1080);
-    } else {
-      return 50;
-    }
-  }
-
   // ヘッダーの背景色変更
   $(window).on('scroll', function() {
     let scrollTop = $(this).scrollTop();
@@ -83,12 +72,6 @@ jQuery(function ($) {
   $('.js-works-modal-overlay, .js-works-modal-close').on('click', function() {
     $('.js-works-modal').removeClass('is-open');
     $('body').css('overflow', '');
-
-    let headerHeight = window.innerWidth >= 768 ? 80 : 50;
-    let aboutTop = $('#about').offset().top - headerHeight;
-    if ($(window).scrollTop() > aboutTop) {
-      $('.js-pagetop').fadeIn();
-    }
   });
 
   // Worksアイテムのテキスト文字数に応じてクラスを付与する

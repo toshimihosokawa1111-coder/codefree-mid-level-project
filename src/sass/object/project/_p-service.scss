@@ -6,7 +6,7 @@
   padding-bottom: myrem(50);
 
   @include mq(md) {
-    padding-top: myrem(82);
+    padding-top: myrem(80);
     padding-bottom: myrem(80);
   }
 }
@@ -16,7 +16,7 @@
   margin-top: myrem(37);
 
   @include mq(md) {
-    margin-top: myrem(66);
+    margin-top: myrem(68);
   }
 }
 

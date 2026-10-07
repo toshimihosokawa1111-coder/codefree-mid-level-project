@@ -554,7 +554,7 @@ button {
 }
 @media screen and (min-width: 768px) {
   .p-company {
-    padding-top: 5.125rem;
+    padding-top: 5rem;
     padding-bottom: 5rem;
   }
 }
@@ -583,7 +583,7 @@ button {
     width: 37.5rem;
     position: relative;
     z-index: 100;
-    padding-bottom: 3.75rem;
+    padding-bottom: 3.8125rem;
   }
 }
 
@@ -623,6 +623,7 @@ button {
     z-index: 0;
     width: 60%;
     min-width: 17.5rem;
+    margin-top: 0;
   }
 }
 @media screen and (min-width: 980px) {
@@ -690,9 +691,6 @@ button {
 }
 @media screen and (min-width: 768px) {
   .p-contact-item__label {
-    width: 10.625rem;
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
     white-space: nowrap;
   }
 }
@@ -700,12 +698,6 @@ button {
 @media screen and (min-width: 768px) {
   .p-contact-item--email .p-contact-item__required {
     margin-left: 0.1875rem;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .p-contact-item__label--message {
-    width: auto;
   }
 }
 
@@ -766,9 +758,10 @@ button {
 }
 @media screen and (min-width: 768px) {
   .p-contact-item__radios {
-    -webkit-column-gap: 4.375rem;
-       -moz-column-gap: 4.375rem;
-            column-gap: 4.375rem;
+    -webkit-column-gap: 4.625rem;
+       -moz-column-gap: 4.625rem;
+            column-gap: 4.625rem;
+    padding-left: 0.1875rem;
   }
 }
 
@@ -779,9 +772,9 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-column-gap: 0.5rem;
-     -moz-column-gap: 0.5rem;
-          column-gap: 0.5rem;
+  -webkit-column-gap: 0.625rem;
+     -moz-column-gap: 0.625rem;
+          column-gap: 0.625rem;
   cursor: pointer;
 }
 @media screen and (min-width: 768px) {
@@ -803,7 +796,7 @@ button {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   position: relative;
-  margin: 0.1875rem 0 0.125rem 0.1875rem;
+  margin: 0;
   cursor: pointer;
 }
 .p-contact-item__radio input:checked::after {
@@ -882,15 +875,12 @@ button {
 
 .p-contact-item__checkboxes {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(8.875rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(9.6875rem, 1fr));
   row-gap: 0.3125rem;
   width: 100%;
 }
 @media screen and (min-width: 768px) {
   .p-contact-item__checkboxes {
-    -webkit-column-gap: 0;
-       -moz-column-gap: 0;
-            column-gap: 0;
     row-gap: 0.9375rem;
     margin-top: 0.625rem;
     grid-template-columns: repeat(auto-fit, minmax(10.375rem, 1fr));
@@ -1119,19 +1109,17 @@ button {
 @media screen and (min-width: 768px) {
   .p-contact-item__label--check {
     line-height: 1.65;
-    width: auto;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .p-contact-item__label--privacy {
-    width: auto;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .p-contact-item__label--privacy {
-    width: auto;
+  .p-contact-item__label--name,
+  .p-contact-item__label--gender,
+  .p-contact-item__label--email,
+  .p-contact-item__label--category {
+    width: 10.625rem;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
   }
 }
 
@@ -1398,7 +1386,6 @@ button {
 }
 
 .p-header__inner {
-  width: 100%;
   height: 3.125rem;
   padding-left: 1.25rem;
   padding-right: 0;
@@ -2036,7 +2023,7 @@ button {
 }
 @media screen and (min-width: 768px) {
   .p-service {
-    padding-top: 5.125rem;
+    padding-top: 5rem;
     padding-bottom: 5rem;
   }
 }
@@ -2046,7 +2033,7 @@ button {
 }
 @media screen and (min-width: 768px) {
   .p-service__contents {
-    margin-top: 4.125rem;
+    margin-top: 4.25rem;
   }
 }
 
