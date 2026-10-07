@@ -18,8 +18,6 @@
   line-height: 1.65;
 
   @include mq(md) {
-    width: myrem(170);
-    flex-shrink: 0;
     white-space: nowrap;
   }
 }
@@ -27,12 +25,6 @@
 .p-contact-item--email .p-contact-item__required {
   @include mq(md) {
     margin-left: myrem(3);
-  }
-}
-
-.p-contact-item__label--message {
-  @include mq(md) {
-    width: auto;
   }
 }
 
@@ -78,14 +70,15 @@
   }
 
   @include mq(md) {
-    column-gap: myrem(70);
+    column-gap: myrem(74);
+    padding-left: myrem(3);
   }
 }
 
 .p-contact-item__radio {
   display: flex;
   align-items: center;
-  column-gap: myrem(8);
+  column-gap: myrem(10);
   cursor: pointer;
 
   @include mq(md) {
@@ -101,7 +94,7 @@
   border-radius: 50%;
   flex-shrink: 0;
   position: relative;
-  margin: myrem(3) 0 myrem(2) myrem(3);
+  margin: 0;
   cursor: pointer;
 
   &:checked::after {
@@ -174,12 +167,11 @@
 
 .p-contact-item__checkboxes {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(myrem(142), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(myrem(155), 1fr));
   row-gap: myrem(5);
   width: 100%;
 
   @include mq(md) {
-    column-gap: 0;
     row-gap: myrem(15);
     margin-top: myrem(10);
     grid-template-columns: repeat(auto-fit, minmax(myrem(166), 1fr));
@@ -355,18 +347,15 @@
 
   @include mq(md) {
     line-height: 1.65;
-    width: auto;
   }
 }
 
-.p-contact-item__label--privacy {
+.p-contact-item__label--name,
+.p-contact-item__label--gender,
+.p-contact-item__label--email,
+.p-contact-item__label--category {
   @include mq(md) {
-    width: auto;
-  }
-}
-
-.p-contact-item__label--privacy {
-  @include mq(md) {
-    width: auto;
+    width: myrem(170);
+    flex-shrink: 0;
   }
 }
