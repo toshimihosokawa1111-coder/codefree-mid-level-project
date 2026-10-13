@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .p-company {
-  padding-top: myrem(52);
+  padding-top: myrem(50);
   padding-bottom: myrem(50);
 
   @include mq(md) {
@@ -44,7 +44,7 @@
 
 .p-company__info {
   flex: 1;
-  margin-top: myrem(19);
+  margin-top: myrem(21);
   background: $green;
   color: $white;
   padding: myrem(19) myrem(20) myrem(12);

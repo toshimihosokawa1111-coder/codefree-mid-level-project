@@ -138,6 +138,7 @@
 .p-service-item__text {
   margin-top: myrem(14);
   font-size: myrem(16);
+  font-weight: 600;
   line-height: 1.5625;
   color: $white;
   position: relative;
@@ -152,7 +153,6 @@
 
   @include mq(mdMid) {
     font-size: myrem(16);
-    font-weight: 600;
     line-height: 1.5625;
     margin-top: myrem(19);
   }

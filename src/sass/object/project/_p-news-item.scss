@@ -50,10 +50,10 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
-  margin-top: myrem(6);
+  padding-top: myrem(6);
 
   @include mq(md) {
-    margin-top: myrem(7);
+    padding-top: myrem(7);
   }
 }
 
