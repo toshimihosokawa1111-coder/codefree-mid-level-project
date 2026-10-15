@@ -72,6 +72,7 @@ jQuery(function ($) {
   $('.js-works-modal-overlay, .js-works-modal-close').on('click', function() {
     $('.js-works-modal').removeClass('is-open');
     $('body').css('overflow', '');
+    $('.js-pagetop').show();
   });
 
   // Worksアイテムのテキスト文字数に応じてクラスを付与する

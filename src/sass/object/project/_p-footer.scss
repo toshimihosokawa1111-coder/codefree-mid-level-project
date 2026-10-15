@@ -51,7 +51,7 @@
   row-gap: myrem(5);
 
   @include mq(md) {
-    column-gap: myrem(40)
+    column-gap: myrem(40);
   }
   
   @include mq(tab) {

@@ -66,7 +66,7 @@
   column-gap: myrem(39);
 
   @include mq-max("xs") {
-    column-gap: myrem(20)
+    column-gap: myrem(20);
   }
 
   @include mq(md) {
@@ -157,11 +157,13 @@
   line-height: 1.5625;
   word-break: break-all;
   resize: none;
-  font-size: myrem(18);
-
+  font-weight: 500;
+  font-size: myrem(16);
+  
   @include mq(md) {
     line-height: 1.38889;
     margin-top: myrem(10);
+    font-size: myrem(18);
   }
 }
 
@@ -250,6 +252,17 @@
 
   @include mq(md) {
     padding: myrem(30) myrem(40) myrem(30) myrem(30);
+  }
+}
+
+.p-contact-item__policy-contents a {
+
+  @include mq(md) {
+    transition: opacity 0.4s;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 
