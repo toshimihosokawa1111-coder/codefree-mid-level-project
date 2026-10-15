@@ -27,12 +27,12 @@
     width: myrem(68);
     height: myrem(68);
     right: myrem(60);
-
-    &:hover {
+    
+    &.is-show:hover {
       opacity: 0.7;
     }
   }
-}
+  }
 
 .c-pagetop__icon {
   display: block;

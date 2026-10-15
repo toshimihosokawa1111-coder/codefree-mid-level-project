@@ -292,7 +292,7 @@ button {
     height: 4.25rem;
     right: 3.75rem;
   }
-  .c-pagetop:hover {
+  .c-pagetop.is-show:hover {
     opacity: 0.7;
   }
 }
@@ -528,10 +528,12 @@ button {
 .p-company-detail__mail .p-company-detail__value a {
   display: inline-block;
   height: 100%;
-  -webkit-transition: opacity 0.4s;
-  transition: opacity 0.4s;
 }
 @media screen and (min-width: 768px) {
+  .p-company-detail__mail .p-company-detail__value a {
+    -webkit-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+  }
   .p-company-detail__mail .p-company-detail__value a:hover {
     opacity: 0.7;
   }
@@ -864,12 +866,14 @@ button {
   line-height: 1.5625;
   word-break: break-all;
   resize: none;
-  font-size: 1.125rem;
+  font-weight: 500;
+  font-size: 1rem;
 }
 @media screen and (min-width: 768px) {
   .p-contact-item__textarea {
     line-height: 1.38889;
     margin-top: 0.625rem;
+    font-size: 1.125rem;
   }
 }
 
@@ -971,6 +975,16 @@ button {
 @media screen and (min-width: 768px) {
   .p-contact-item__policy-contents {
     padding: 1.875rem 2.5rem 1.875rem 1.875rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .p-contact-item__policy-contents a {
+    -webkit-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+  }
+  .p-contact-item__policy-contents a:hover {
+    opacity: 0.7;
   }
 }
 
