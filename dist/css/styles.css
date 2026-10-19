@@ -851,6 +851,8 @@ button {
   -webkit-appearance: none;
   -moz-appearance: none;
   cursor: pointer;
+  background: #fff;
+  color: #000;
 }
 @media screen and (min-width: 768px) {
   .p-contact-item__select {
@@ -914,6 +916,7 @@ button {
   background: #fff;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  border-radius: 0;
   position: relative;
   cursor: pointer;
 }
