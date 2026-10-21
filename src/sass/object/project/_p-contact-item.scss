@@ -51,7 +51,7 @@
   font-size: myrem(16);
   font-weight: 500;
   line-height: 1.5625;
-  padding: myrem(14) myrem(17) myrem(14) myrem(20);
+  padding: myrem(13) myrem(17) myrem(12) myrem(20);
 
   @include mq(md) {
     flex: 1;
